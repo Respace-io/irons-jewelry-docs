@@ -21,12 +21,12 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Iron's Spells n Spellbooks # the main title
+title: Iron's Gems and Jewelry # the main title
 
-tagline: Bringing magic to Minecraft # it will display as the sub-title
+tagline: Dare to Dazzle # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Iron's Spells n Spellbooks - Documentation
+  Iron's Gems and Jewelry - Documentation
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ""
@@ -56,7 +56,7 @@ google_site_verification: # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id: G-C85LNHNS0V # fill in your Google Analytics ID
+  id: G-08HRVNFNGD # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint: # fill in the Google Analytics superProxy endpoint of Google App Engine

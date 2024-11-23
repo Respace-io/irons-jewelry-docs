@@ -1,0 +1,205 @@
+<head>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+<div class="treeview">
+  <ul>
+    <li><span title="NBT Compound / JSON Object"><span class="sprite nbt-sprite"
+                                                       style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span></span>
+      The root tag
+      <ul>
+        <li><span title="String"><span class="sprite nbt-sprite"
+                                       style="background-position:-32px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+          class="nowrap" style="font-weight: bold;">&nbsp;parent</span>: Loads a different model from the given path, in
+          form of a <a href="/w/Tutorials/Models#File_path" title="Tutorials/Models">resource location</a>. If both
+          <code>"parent"</code> and <code>"elements"</code> are set, the <code>"elements"</code> tag overrides the
+          <code>"elements"</code> tag from the previous model.
+          <ul>
+            <li>Can be set to <code>"builtin/generated"</code> to use a model that is created out of the specified icon.
+              Only the first layer is supported, and rotation can be achieved only by using block states files.
+            </li>
+          </ul>
+        </li>
+        <li><span title="Byte"><span class="sprite nbt-sprite"
+                                     style="background-position:-0px -0px;background-size:64px auto;height:16px;width:16px"></span></span><span
+          class="nowrap" style="font-weight: bold;">&nbsp;ambientocclusion</span>: Whether to use <a target="_blank"
+                                                                                                     rel="nofollow noreferrer noopener"
+                                                                                                     class="external text"
+                                                                                                     href="http://en.wikipedia.org/wiki/Ambient_occlusion">ambient
+          occlusion</a> (<code>true</code> - default), or not (<code>false</code>).
+        </li>
+        <li><span title="NBT Compound / JSON Object"><span class="sprite nbt-sprite"
+                                                           style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+          class="nowrap" style="font-weight: bold;">&nbsp;display</span>: Holds the different places where item models
+          are displayed.
+          <ul>
+            <li><span title="NBT Compound / JSON Object"><span class="sprite nbt-sprite"
+                                                               style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+              class="nowrap" style="font-weight: bold;">&nbsp;<i>Position</i></span>: Named
+              <code>thirdperson_righthand</code>, <code>thirdperson_lefthand</code>, <code>firstperson_righthand</code>,
+              <code>firstperson_lefthand</code>, <code>gui</code>, <code>head</code>, <code>ground</code>, or <code>fixed</code>.
+              Place where an item model is displayed. Holds its rotation, translation and scale for the specified
+              situation. <b>fixed</b> refers to item frames, while the rest are as their name states. Translations are
+              applied to the model before rotations.
+              <ul>
+                <li><span title="NBT List / JSON Array"><span class="sprite nbt-sprite"
+                                                              style="background-position:-32px -32px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                  class="nowrap" style="font-weight: bold;">&nbsp;rotation</span>: Specifies the rotation of the model
+                  according to the scheme <code>[x, y, z]</code>.
+                </li>
+                <li><span title="NBT List / JSON Array"><span class="sprite nbt-sprite"
+                                                              style="background-position:-32px -32px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                  class="nowrap" style="font-weight: bold;">&nbsp;translation</span>: Specifies the position of the
+                  model according to the scheme <code>[x, y, z]</code>. The values are clamped between -80 and 80.
+                </li>
+                <li><span title="NBT List / JSON Array"><span class="sprite nbt-sprite"
+                                                              style="background-position:-32px -32px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                  class="nowrap" style="font-weight: bold;">&nbsp;scale</span>: Specifies the scale of the model
+                  according to the scheme <code>[x, y, z]</code>. If the value is greater than 4, it is displayed as 4.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><span title="NBT Compound / JSON Object"><span class="sprite nbt-sprite"
+                                                           style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+          class="nowrap" style="font-weight: bold;">&nbsp;textures</span>: Holds the textures of the model, in form of a
+          <a href="/w/Tutorials/Models#File_path" title="Tutorials/Models">resource location</a> or can be another
+          texture variable.
+          <ul>
+            <li><span title="String"><span class="sprite nbt-sprite"
+                                           style="background-position:-32px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+              class="nowrap" style="font-weight: bold;">&nbsp;particle</span>: What texture to load particles from. This
+              texture is also used as an overlay if you are in a <a href="/w/Nether_portal" title="Nether portal">nether
+                portal</a>, and used for <a href="/w/Water" title="Water">water</a> and <a href="/w/Lava" title="Lava">lava</a>'s
+              still textures.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> This texture is
+              also considered a texture variable that can be referenced as <code>"#particle"</code>. Note: All breaking
+              particles from non-model blocks are hard-coded, such as for <a href="/w/Barrier"
+                                                                             title="Barrier">barriers</a>.
+            </li>
+            <li><span title="String"><span class="sprite nbt-sprite"
+                                           style="background-position:-32px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+              class="nowrap" style="font-weight: bold;">&nbsp;<i>Texture variable</i></span>: Defines a texture variable
+              and assigns a texture.
+            </li>
+          </ul>
+        </li>
+        <li><span title="NBT List / JSON Array"><span class="sprite nbt-sprite"
+                                                      style="background-position:-32px -32px;background-size:64px auto;height:16px;width:16px"></span></span><span
+          class="nowrap" style="font-weight: bold;">&nbsp;elements</span>: Contains all the elements of the model. They
+          can have only cubic forms. If both <code>"parent"</code> and <code>"elements"</code> are set, the <code>"elements"</code>
+          tag overrides the <code>"elements"</code> tag from the previous model.
+          <ul>
+            <li><span title="NBT Compound / JSON Object"><span class="sprite nbt-sprite"
+                                                               style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span></span>
+              An element.
+              <ul>
+                <li><span title="NBT List / JSON Array"><span class="sprite nbt-sprite"
+                                                              style="background-position:-32px -32px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                  class="nowrap" style="font-weight: bold;">&nbsp;from</span>: Start point of a cuboid according to the
+                  scheme <code>[x, y, z]</code>. Values must be between -16 and 32.
+                </li>
+                <li><span title="NBT List / JSON Array"><span class="sprite nbt-sprite"
+                                                              style="background-position:-32px -32px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                  class="nowrap" style="font-weight: bold;">&nbsp;to</span>: Stop point of a cuboid according to the
+                  scheme <code>[x, y, z]</code>. Values must be between -16 and 32.
+                </li>
+                <li><span title="NBT Compound / JSON Object"><span class="sprite nbt-sprite"
+                                                                   style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                  class="nowrap" style="font-weight: bold;">&nbsp;rotation</span>: Defines the rotation of an element.
+                  <ul>
+                    <li><span title="NBT List / JSON Array"><span class="sprite nbt-sprite"
+                                                                  style="background-position:-32px -32px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                      class="nowrap" style="font-weight: bold;">&nbsp;origin</span>: Sets the center of the rotation
+                      according to the scheme <code>[x, y, z]</code>.
+                    </li>
+                    <li><span title="String"><span class="sprite nbt-sprite"
+                                                   style="background-position:-32px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                      class="nowrap" style="font-weight: bold;">&nbsp;axis</span>: Specifies the direction of rotation,
+                      can be <code>"x"</code>, <code>"y"</code> or <code>"z"</code>.
+                    </li>
+                    <li><span title="Float"><span class="sprite nbt-sprite"
+                                                  style="background-position:-32px -0px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                      class="nowrap" style="font-weight: bold;">&nbsp;angle</span>: Specifies the angle of rotation. Can
+                      be 45 through -45 degrees in 22.5 degree increments.
+                    </li>
+                    <li><span title="Byte"><span class="sprite nbt-sprite"
+                                                 style="background-position:-0px -0px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                      class="nowrap" style="font-weight: bold;">&nbsp;rescale</span>: Specifies whether or not to scale
+                      the faces across the whole block. Can be true or false. Defaults to false.
+                    </li>
+                  </ul>
+                </li>
+                <li><span title="Byte"><span class="sprite nbt-sprite"
+                                             style="background-position:-0px -0px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                  class="nowrap" style="font-weight: bold;">&nbsp;shade</span>: Defines if shadows are rendered (<code>true</code>
+                  - default), not (<code>false</code>).
+                </li>
+                <li><span title="Int"><span class="sprite nbt-sprite"
+                                            style="background-position:-48px -0px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                  class="nowrap" style="font-weight: bold;">&nbsp;light_emission</span>: Defines the minimum light level
+                  that the element can receive. Can be 0-15, defaults to 0.
+                </li>
+                <li><span title="NBT Compound / JSON Object"><span class="sprite nbt-sprite"
+                                                                   style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                  class="nowrap" style="font-weight: bold;">&nbsp;faces</span>: Holds all the faces of the cuboid. If a
+                  face is left out, it does not render.
+                  <ul>
+                    <li><span title="NBT Compound / JSON Object"><span class="sprite nbt-sprite"
+                                                                       style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                      class="nowrap" style="font-weight: bold;">&nbsp;<i>Face</i></span>: Named <code>down</code>,
+                      <code>up</code>, <code>north</code>, <code>south</code>, <code>west</code> or <code>east</code>.
+                      Contains the properties of the specified face.
+                      <ul>
+                        <li><span title="NBT List / JSON Array"><span class="sprite nbt-sprite"
+                                                                      style="background-position:-32px -32px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                          class="nowrap" style="font-weight: bold;">&nbsp;uv:</span> Defines the area of the texture to
+                          use according to the scheme <code>[x1, y1, x2, y2]</code>. The texture behavior is
+                          inconsistent if UV extends below 0 or above 16. If the numbers of <code>x1</code> and
+                          <code>x2</code> are swapped (e.g. from <code>0, 0, 16, 16</code> to <code>16, 0, 0, 16</code>),
+                          the texture flips. UV is optional, and if not supplied it automatically generates based on the
+                          element's position.
+                        </li>
+                        <li><span title="String"><span class="sprite nbt-sprite"
+                                                       style="background-position:-32px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                          class="nowrap" style="font-weight: bold;">&nbsp;texture:</span> Specifies the texture in form
+                          of the texture variable prepended with a <code>#</code>.
+                        </li>
+                        <li><span title="String"><span class="sprite nbt-sprite"
+                                                       style="background-position:-32px -16px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                          class="nowrap" style="font-weight: bold;">&nbsp;cullface:</span> Specifies whether a face does
+                          not need to be rendered when there is a block touching it in the specified position. The
+                          position can be: <code>down</code>, <code>up</code>, <code>north</code>, <code>south</code>,
+                          <code>west</code>, or <code>east</code>. It also determines the side of the block to use the
+                          light level from for lighting the face, and if unset, defaults to the side.
+                        </li>
+                        <li><span title="Int"><span class="sprite nbt-sprite"
+                                                    style="background-position:-48px -0px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                          class="nowrap" style="font-weight: bold;">&nbsp;rotation</span>: Rotates the texture clockwise
+                          by the specified number of degrees. Can be 0, 90, 180, or 270. Defaults to 0. Rotation does
+                          not affect which part of the texture is used. Instead, it amounts to permutation of the
+                          selected texture vertexes (selected implicitly, or explicitly though <code>uv</code>).
+                        </li>
+                        <li><span title="Int"><span class="sprite nbt-sprite"
+                                                    style="background-position:-48px -0px;background-size:64px auto;height:16px;width:16px"></span></span><span
+                          class="nowrap" style="font-weight: bold;">&nbsp;tintindex</span>: Determines whether to tint
+                          the texture using a hardcoded tint index. The default value, -1, indicates not to use the
+                          tint. Any other number is provided to BlockColors to get the tint value corresponding to that
+                          index. However, most blocks do not have a tint value defined (in which case white is used).
+                          Furthermore, no vanilla block currently uses multiple tint values, and thus the tint index
+                          value is ignored (as long as it is set to something other than -1); it could be used for
+                          modded blocks that need multiple distinct tint values in the same block though.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</body>
