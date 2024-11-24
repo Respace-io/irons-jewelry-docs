@@ -1,7 +1,6 @@
 - jsonElementType: "object"
   jsonElementName: "RootName"
   jsonElementDesc: "Root Object Desc"
-  jsonElementOpt: true
   jsonElements:
     - jsonElementType: "object"
       jsonElementName: "object 1"
@@ -23,6 +22,7 @@
             - jsonElementType: "string"
               jsonElementName: "string 3"
               jsonElementDesc: "string 3 desc"
+              jsonElementOpt: true
     - jsonElementType: "string"
       jsonElementName: "string 1"
       jsonElementDesc: "string 1 desc"

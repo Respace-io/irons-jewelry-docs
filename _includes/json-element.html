@@ -39,7 +39,7 @@
       {% endcase %}
       </span>
       <span class="nowrap" style="font-weight: bold; color: #5b33ae">&nbsp;{{element.jsonElementName}}</span>
-      : {{element.jsonElementDesc}}
+      : {% if element.jsonElementOpt == true %}(Optional){% endif %} {{element.jsonElementDesc}}
       {% if element.jsonElements.size > 0 %}
         {% include json-element.html %}
       {% endif %}
