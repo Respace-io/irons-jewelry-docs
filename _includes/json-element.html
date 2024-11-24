@@ -1,0 +1,54 @@
+{% assign element = include.element %}
+
+<ul>
+
+{% if element.jsonElements.size > 0 %}
+
+  {% for element in element.jsonElements %}
+    <li>
+      <span title="{{element.jsonElementType}}">
+      {% case element.jsonElementType %}
+        {% when "object" %}
+          <span class="sprite json-sprite" style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "array" %}
+          <span class="sprite json-sprite" style="background-position:-32px -32px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "string" %}
+          <span class="sprite json-sprite" style="background-position:-32px -16px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "boolean" %}
+          <span class="sprite json-sprite" style="background-position:-48px -32px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "float" %}
+          <span class="sprite json-sprite" style="background-position:-32px -0px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "intArray" %}
+          <span class="sprite json-sprite" style="background-position:-16px -32px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "int" %}
+          <span class="sprite json-sprite" style="background-position:-48px -0px;background-size:64px auto;height:16px;width:16px"></span>        {% when "int" %}
+        {% when "long" %}
+          <span class="sprite json-sprite" style="background-position:-0px -16px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "double" %}
+          <span class="sprite json-sprite" style="background-position:-16px -0px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "short" %}
+          <span class="sprite json-sprite" style="background-position:-16px -16px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "byteArray" %}
+          <span class="sprite json-sprite" style="background-position:-0px -32px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "longArray" %}
+          <span class="sprite json-sprite" style="background-position:-0px -48px;background-size:64px auto;height:16px;width:16px"></span>
+        {% when "byte" %}
+          <span class="sprite json-sprite" style="background-position:-0px -0px;background-size:64px auto;height:16px;width:16px"></span>
+        {% else %}
+          <span class="sprite json-sprite" style="background-position:-16px -48px;background-size:64px auto;height:16px;width:16px"></span>
+      {% endcase %}
+      </span>
+      <span class="nowrap" style="font-weight: bold; color: #5b33ae">&nbsp;{{element.jsonElementName}}</span>
+      : {{element.jsonElementDesc}}
+      {% if element.jsonElements.size > 0 %}
+        {% include json-element.html %}
+      {% endif %}
+    </li>
+  {% endfor %}
+
+{% endif %}
+
+</ul>
+
+
+

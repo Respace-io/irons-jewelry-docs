@@ -1,0 +1,17 @@
+{% assign jsonSchema = include.jsonSchema %}
+
+<div class="treeview">
+  <ul>
+    <li>
+      <span title="{{jsonSchema[0].jsonElementType}}">
+        <span class="sprite json-sprite" style="background-position:-48px -16px;background-size:64px auto;height:16px;width:16px"></span>
+      </span>
+      <span class="nowrap" style="font-weight: bold; color: #5a1c74">&nbsp;{{jsonSchema[0].jsonElementName}}</span>
+      : {{jsonSchema[0].jsonElementDesc}}
+      {% for element in jsonSchema %}
+        {% include json-element.html %}
+      {% endfor %}
+    </li>
+  </ul>
+
+</div>

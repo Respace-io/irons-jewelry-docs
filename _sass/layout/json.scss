@@ -1,32 +1,6 @@
-body {
-  color: rgb(32, 33, 34);
-  direction: ltr;
-  display: inline;
-  font-family: "Liberation Sans", Arial, Helvetica, FreeSans, sans-serif;
-  font-size: 14px;
-  height: auto;
-  line-height: 22.4px;
-  list-style-image: none;
-  list-style-type: none;
-  overflow-wrap: break-word;
-  tab-size: 4;
-  text-align: left;
-  text-wrap-mode: nowrap;
-  white-space-collapse: collapse;
-  width: auto;
-}
-
 code {
   border-radius: 2px;
   padding: 1px 4px
-}
-
-@media screen {
-  pre,code,.mw-code {
-    background-color: #F8F9FA;
-    color: #000;
-    border: 1px solid #BBC2C6
-  }
 }
 
 code {
@@ -42,12 +16,26 @@ code {
 }
 
 .json-sprite {
-  background-image: url(./images/json_sprite.png)
+  background-image: url(/assets/img/json_sprite.png)
 }
 
 .treeview {
   margin-top: 0.3em;
-  display: flow-root
+  display: flow-root;
+  direction: ltr;
+  display: inline;
+  font-family: "Liberation Sans", Arial, Helvetica, FreeSans, sans-serif;
+  font-size: 18px;
+  height: auto;
+  line-height: 27px;
+  list-style-image: none;
+  list-style-type: none;
+  overflow-wrap: break-word;
+  tab-size: 4;
+  text-align: left;
+  text-wrap-mode: nowrap;
+  white-space-collapse: collapse;
+  width: auto;
 }
 
 .treeview .treeview-header {
