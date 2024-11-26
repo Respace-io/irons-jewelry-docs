@@ -1,0 +1,7 @@
+- jsonElementType: "object"
+  jsonElementName: "IgniteAction"
+  jsonElementDesc: "Root Object Desc"
+  jsonElements:
+    - jsonElementType: "quality_scalar"
+      jsonElementName: "tickDuration"
+      jsonElementDesc: "<code>QualityScalar</code> representing the duration of the ignition in ticks"

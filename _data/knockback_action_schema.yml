@@ -1,0 +1,7 @@
+- jsonElementType: "object"
+  jsonElementName: "KnockbackAction"
+  jsonElementDesc: "Root Object Desc"
+  jsonElements:
+    - jsonElementType: "quality_scalar"
+      jsonElementName: "strength"
+      jsonElementDesc: "<code>QualityScalar</code> representing the strength of the knockback. Negative values pull entities inwards."

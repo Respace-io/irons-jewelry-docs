@@ -1,0 +1,13 @@
+- jsonElementType: "object"
+  jsonElementName: "ApplyEffectAction"
+  jsonElementDesc: "Root Object Desc"
+  jsonElements:
+    - jsonElementType: "quality_scalar"
+      jsonElementName: "duration"
+      jsonElementDesc: "<code>QualityScalar</code> of the effect's duration"
+    - jsonElementType: "quality_scalar"
+      jsonElementName: "amplifier"
+      jsonElementDesc: "<code>QualityScalar</code> of the effect's amplifier"
+    - jsonElementType: "string"
+      jsonElementName: "effect"
+      jsonElementDesc: "<code>ResourceLocation</code> pointing to an object of type <code>MOB_EFFECT</code>"

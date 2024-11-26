@@ -1,0 +1,10 @@
+- jsonElementType: "object"
+  jsonElementName: "ApplyFreezeAction"
+  jsonElementDesc: "Root Object Desc"
+  jsonElements:
+    - jsonElementType: "quality_scalar"
+      jsonElementName: "amount"
+      jsonElementDesc: "<code>QualityScalar</code> representing the freeze amount"
+    - jsonElementType: "boolean"
+      jsonElementName: "instaFreeze"
+      jsonElementDesc: "(Optional) Whether the freeze effect is instant; defaults to false"

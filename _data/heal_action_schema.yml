@@ -1,0 +1,7 @@
+- jsonElementType: "object"
+  jsonElementName: "HealAction"
+  jsonElementDesc: "Root Object Desc"
+  jsonElements:
+    - jsonElementType: "quality_scalar"
+      jsonElementName: "amount"
+      jsonElementDesc: "<code>QualityScalar</code> representing the amount of healing"
