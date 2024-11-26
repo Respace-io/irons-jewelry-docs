@@ -30,10 +30,30 @@
         jsonElements:
           - jsonElementType: "string"
             jsonElementName: "id"
-            jsonElementDesc: "ResourceLocation"
+            jsonElementDesc: "ResourceLocation of <code>PartDefinition</code>"
           - jsonElementType: "int"
             jsonElementName: "materialCost"
             jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
           - jsonElementType: "int"
             jsonElementName: "drawOrder"
             jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+          - jsonElementType: "array"
+            jsonElementName: "bonuses"
+            jsonElementOpt: true
+            jsonElementDesc: "Array of <code>Bonus</code>"
+            jsonElements:
+            - jsonElementType: "object"
+              jsonElementName: "Bonus"
+              jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+              jsonElements:
+              - jsonElementType: "string"
+                jsonElementName: "bonusType"
+                jsonElementDesc: "ResourceLocation used for BonusType registry"
+              - jsonElementType: "double"
+                jsonElementName: "qualityMultiplier"
+                jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+              - jsonElementType: "quality_scalar"
+                jsonElementName: "cooldown"
+                jsonElementOpt: true
+                jsonElementDesc: "<code>QualityScalar</code>"
+
