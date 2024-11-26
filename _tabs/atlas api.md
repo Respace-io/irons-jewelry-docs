@@ -155,19 +155,19 @@ here: [https://docs.neoforged.net/docs/resources/client/models/modelloaders/](ht
 
 ## What is an Atlas?
 
-Atlas API allows for runtime generated atlases, So what is an Atlas? Also known as a spritesheet, an Atlas is a term in
-computer graphics that refers to a single large texture sheet that is made up of multiple textures stitched together.
-This is usually done to save performance, where instead of loading separate texture files, only the atlas file is
+Atlas API allows for runtime generated atlases, so what is an Atlas? Also known as a spritesheet, an Atlas is a term in
+computer graphics that refers to a single large texture that is made up of many smaller textures stitched together.
+This is usually done to for game performance, where instead of loading separate texture files, only one atlas file is
 loaded, and the game knows how to find a specific texture on it. More about generic texture atlases can
-be [read here](https://en.wikipedia.org/wiki/Texture_atlas)
+be [read here](https://en.wikipedia.org/wiki/Texture_atlas).
 * * *
 Minecraft's atlases are generated when the game loads, or when textures are reloaded. This means they are completely
-rigid and must be configured before the game launches, by a mod or by a texture pack. However, by the advent of
-Minecraft's palette system (seen in armor trims), there is a growing use-case for dynamic textures, generated at
-runtime, and especially based on datapacks or other data-driven resources. This is where Atlas API
-comes [into play](atlas-api/#introduction). Below are examples of Minecraft texture atlases: 
+rigid and must be configured in advance, usually before the game launches, by a mod or by a texture pack. However, with the advent of
+Minecraft's palette system (seen in armor trims), there is a growing use-case for dynamic textures generated at
+runtime, especially those based on datapacks or other data-driven resources. This is where Atlas API
+comes [into play](/atlas-api/#introduction). Below are examples of Minecraft texture atlases: 
 ### Minecraft Block Atlas (Fixed at texture load)
 ![Minecraft Block Atlas](/img/screenshots/minecraft_block_atlas.png)
-### Iron's Jewelry Paletted Permutations Atlas (Datadriven Atlas API Atlas)
+### Iron's Jewelry Atlas (Datadriven Atlas API Atlas)
 ![Irons Jewelry Atlas](/img/screenshots/irons_jewelry_atlas.png)
 
