@@ -2,10 +2,10 @@
 
 <ul>
 
-{% if element.jsonElements.size > 0 %}
+  {% if element.jsonElements.size > 0 %}
 
   {% for element in element.jsonElements %}
-    <li>
+  <li>
       <span title="{{element.jsonElementType}}">
       {% case element.jsonElementType %}
         {% when "object" %}
@@ -27,7 +27,7 @@
         {% when "intArray" %}
           <span class="sprite json-sprite" style="background-position:-16px -32px;background-size:64px auto;height:16px;width:16px"></span>
         {% when "int" %}
-          <span class="sprite json-sprite" style="background-position:-48px -0px;background-size:64px auto;height:16px;width:16px"></span>        {% when "int" %}
+          <span class="sprite json-sprite" style="background-position:-48px -0px;background-size:64px auto;height:16px;width:16px"></span>
         {% when "long" %}
           <span class="sprite json-sprite" style="background-position:-0px -16px;background-size:64px auto;height:16px;width:16px"></span>
         {% when "double" %}
@@ -44,15 +44,15 @@
           <span class="sprite json-sprite" style="background-position:-16px -48px;background-size:64px auto;height:16px;width:16px"></span>
       {% endcase %}
       </span>
-      <span class="nowrap" style="font-weight: bold; color: #5b33ae">&nbsp;{{element.jsonElementName}}</span>
-      : {% if element.jsonElementOpt == true %}(Optional){% endif %} {{element.jsonElementDesc}}
-      {% if element.jsonElements.size > 0 %}
-        {% include json-element.html %}
-      {% endif %}
-    </li>
+    <span class="nowrap" style="font-weight: bold; color: #5b33ae">&nbsp;{{element.jsonElementName}}</span>
+    : {% if element.jsonElementOpt == true %}(Optional){% endif %} {{element.jsonElementDesc}}
+    {% if element.jsonElements.size > 0 %}
+    {% include json-element.html %}
+    {% endif %}
+  </li>
   {% endfor %}
 
-{% endif %}
+  {% endif %}
 
 </ul>
 
