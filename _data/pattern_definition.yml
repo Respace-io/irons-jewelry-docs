@@ -56,4 +56,8 @@
                 jsonElementName: "cooldown"
                 jsonElementOpt: true
                 jsonElementDesc: "<code>QualityScalar</code>"
+              - jsonElementType: "object"
+                jsonElementName: "parameterType"
+                jsonElementOpt: true
+                jsonElementDesc: "<code>Tuple&lt;ParameterType&lt;T&gt;,T&gt;</code>"
 
