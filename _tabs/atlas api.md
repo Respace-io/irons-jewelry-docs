@@ -7,7 +7,8 @@ toc: true
 
 ## Introduction
 
-Atlas API is a 1.21+ NeoForge API for generating atlases during game runtime, with data-driven textures in
+Atlas API is a 1.21+ NeoForge API for generating [atlases](/atlas-api/#what-is-an-atlas) during game runtime, with
+data-driven textures in
 mind. Atlas API handles all atlas management behind the scenes automatically, and provides a custom model loader that
 allows the user to create dynamic item models from their atlas sprites. Atlas API also handles all model caching,
 clearing, and texture reloads; all you do is tell the API where your textures are, and basic model instructions.
@@ -38,7 +39,9 @@ compileOnly "io.redspace:atlas_api:${atlas_api_version}:api"
 localRuntime "io.redspace:atlas_api:${atlas_api_version}"
 ```
 
-This assumes you have gradle variable `atlas_api_version` setup. Additionally, you may want to use the Atlas Viewer mod when developing to see your dynamic atlas: [curseforge.com/minecraft/mc-mods/atlasviewer](https://www.curseforge.com/minecraft/mc-mods/atlasviewer)
+This assumes you have gradle variable `atlas_api_version` setup. Additionally, you may want to use the Atlas Viewer mod
+when developing to see your dynamic
+atlas: [curseforge.com/minecraft/mc-mods/atlasviewer](https://www.curseforge.com/minecraft/mc-mods/atlasviewer)
 
 ### Example Repo
 
@@ -49,7 +52,8 @@ developed alongside of:
 ## Asset Handler
 
 The entrypoint of Atlas API is your `AssetHandler`. These must be registered, and each registered asset handler
-automatically gets paired with a dynamic atlas. There is exactly one dynamic atlas per handler, and a handler is the only way to get a dynamic atlas. The implementation of its methods is how you instruct the API to build your atlas and
+automatically gets paired with a dynamic atlas. There is exactly one dynamic atlas per handler, and a handler is the
+only way to get a dynamic atlas. The implementation of its methods is how you instruct the API to build your atlas and
 stitch your models. All access to your sprites is done through your asset handler.
 
 ```java
@@ -75,7 +79,7 @@ public abstract class AssetHandler {
 ```
 
 In order for Atlas API to build an atlas for you, you must implement `AssetHandler#buildSpriteSources`. It is called the
-first time the game attempts to access your atlas during runtime (most often when one of your items renders). 
+first time the game attempts to access your atlas during runtime (most often when one of your items renders).
 * * *
 A `SpriteSource` is a vanilla Minecraft structure, and tells an atlas how to convert files into sprites. Some common
 sprite sources are `SingleFile`, `DirectoryListener`, or `PalettedPermutations`. Some additional information is covered
@@ -94,15 +98,23 @@ public abstract class AssetHandler {
 }
 ```
 
-Atlas API provides a custom [model loader](/atlas-api/#model-loader) that can utilize your dynamic sprites in an item model. In order for Atlas API to construct these dynamic models for you, you must
-implement `AssetHandler#makeBakedModelPreparations`. In this method, you are provided the standard item baking context, including the
-ItemStack being rendered. This is called whenever an ItemStack yielding a unique [model ID](/atlas-api/#model-id) is rendered for the first
-time. The baked model it produces is cached. The `BakingPreparations` record which is returned simply contains a list of `ModelLayer` records. The `ModelLayer`
+Atlas API provides a custom [model loader](/atlas-api/#model-loader) that can utilize your dynamic sprites in an item
+model. In order for Atlas API to construct these dynamic models for you, you must
+implement `AssetHandler#makeBakedModelPreparations`. In this method, you are provided the standard item baking context,
+including the
+ItemStack being rendered. This is called whenever an ItemStack yielding a unique [model ID](/atlas-api/#model-id) is
+rendered for the first
+time. The baked model it produces is cached. The `BakingPreparations` record which is returned simply contains a list
+of `ModelLayer` records. The `ModelLayer`
 record is a grouping of data pertaining to rendering a single sprite:
 
 `ModelLayer(ResourceLocation spriteLocation, int drawOrder, Optional<Transformation> transformation)`
 
-`spriteLocation` is a resource location that points to an entry on your atlas. This is provided and maintained by you (these are the resource locations you created in `AssetHandler#buildSpriteSources`). `drawOrder` determines the draw order of your layers; the lowest draw order is drawn first. `transformation` is an optional input of Minecraft's `Transformation` class. This can move, scale, or rotate your sprites. If none is specified, no translations, scalings, or rotations are applied to this layer.
+`spriteLocation` is a resource location that points to an entry on your atlas. This is provided and maintained by you (
+these are the resource locations you created in `AssetHandler#buildSpriteSources`). `drawOrder` determines the draw
+order of your layers; the lowest draw order is drawn first. `transformation` is an optional input of
+Minecraft's `Transformation` class. This can move, scale, or rotate your sprites. If none is specified, no translations,
+scalings, or rotations are applied to this layer.
 
 ### Model ID
 
@@ -117,12 +129,16 @@ public abstract class AssetHandler {
 In order to differentiate when the API should bake a new model for you, you must implement `AssetHandler#modelId`. You
 have the same parameters as `AssetHandler#makeBakedModelPreparations`, because these methods are used in tandem. You
 should implement an alogrithm that produces a unique and deterministic value for every unique model to display. For
-example, if your model is driven by an item component, the id should be the item component's hash code.
+example, if your model is driven by an item component, the id should be the item component's hash code. This ID is
+stored in conjunction with your modid, so you do not need to worry about competing ids with other mods (only yourself).
 
 ## Model Loader
+
 Atlas API provides a custom item model geometry loader to acess your dynamic sprites: `atlas_api:dynamic_model`
-In order to actually use the dynamic baking features of your `AssetHandler`, you must use this geometry loader in your item model definitions, and give it the registered name of your asset handler under the `handler` field.
+In order to actually use the dynamic baking features of your `AssetHandler`, you must use this geometry loader in your
+item model definitions, and give it the registered name of your asset handler under the `handler` field.
 For example, as per our [example registered handler](/atlas-api/#asset-handler):
+
 ```json
 {
   "parent": "minecraft:item/generated",
@@ -131,4 +147,27 @@ For example, as per our [example registered handler](/atlas-api/#asset-handler):
 }
 ```
 
-This is a very simple geometry loader, akin to the `minecraft:builtin/generated` layered model, but with access to Atlas API's dynamic atlas sprites. You can always implement your own loader to meet more advanced rendering requirements, and obtain your sprites via your [asset handler](/atlas-api/#asset-handler). More about geometry loaders can be found here: [https://docs.neoforged.net/docs/resources/client/models/modelloaders/](https://docs.neoforged.net/docs/resources/client/models/modelloaders/)
+In practice, this is a very simple geometry loader, akin to the `minecraft:builtin/generated` layered model, but with
+access to Atlas
+API's dynamic atlas sprites. You can always implement your own loader to meet more advanced rendering requirements, and
+obtain your sprites via your [asset handler](/atlas-api/#asset-handler). More about geometry loaders can be found
+here: [https://docs.neoforged.net/docs/resources/client/models/modelloaders/](https://docs.neoforged.net/docs/resources/client/models/modelloaders/)
+
+## What is an Atlas?
+
+Atlas API allows for runtime generated atlases, So what is an Atlas? Also known as a spritesheet, an Atlas is a term in
+computer graphics that refers to a single large texture sheet that is made up of multiple textures stitched together.
+This is usually done to save performance, where instead of loading separate texture files, only the atlas file is
+loaded, and the game knows how to find a specific texture on it. More about generic texture atlases can
+be [read here](https://en.wikipedia.org/wiki/Texture_atlas)
+* * *
+Minecraft's atlases are generated when the game loads, or when textures are reloaded. This means they are completely
+rigid and must be configured before the game launches, by a mod or by a texture pack. However, by the advent of
+Minecraft's palette system (seen in armor trims), there is a growing use-case for dynamic textures, generated at
+runtime, and especially based on datapacks or other data-driven resources. This is where Atlas API
+comes [into play](atlas-api/#introduction). Below are examples of Minecraft texture atlases: 
+### Minecraft Block Atlas (Fixed at texture load)
+![Minecraft Block Atlas](/img/screenshots/minecraft_block_atlas.png)
+### Iron's Jewelry Paletted Permutations Atlas (Datadriven Atlas API Atlas)
+![Irons Jewelry Atlas](/img/screenshots/irons_jewelry_atlas.png)
+
