@@ -86,7 +86,7 @@ lazy_load_images: false
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: img/logo.png
+avatar: img/logolowres.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true
