@@ -1,0 +1,16 @@
+- jsonElementType: "object"
+  jsonElementName: "ActionRunnable"
+  jsonElementDesc: "Root Object Desc"
+  jsonElements:
+    - jsonElementType: "boolean"
+      jsonElementName: "applyToSelf"
+      jsonElementDesc: "Whether the action should target the wearer, or the causal entity"
+    - jsonElementType: "object"
+      jsonElementName: "action"
+      jsonElementDesc: "<code>Action</code> object"
+      jsonElements:
+        - jsonElementType: "string"
+          jsonElementName: "type"
+          jsonElementDesc: "<code>ResourceLocation</code> pointing to a registered action"
+        - jsonElementType: "object"
+          jsonElementName: "Action"

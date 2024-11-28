@@ -1,0 +1,21 @@
+- jsonElementType: "object"
+  jsonElementName: "PartDefinition"
+  jsonElementDesc: "Description goes here"
+  jsonElements:
+    - jsonElementType: "string"
+      jsonElementName: "descriptionId"
+      jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+    - jsonElementType: "string"
+      jsonElementName: "paletteKey"
+      jsonElementDesc: "<code>ResourceLocation</code> to a texture file that is the palette key for this part's texture"
+    - jsonElementType: "array"
+      jsonElementName: "allowedMaterialTypes"
+      jsonElementDesc: "List of strings"
+      jsonElementOpt: true
+      jsonElements:
+        - jsonElementType: "string"
+          jsonElementName: "String"
+          jsonElementDesc: "A material must have at least one matching tr in order to be allowed to be used to construct this part."
+    - jsonElementType: "string"
+      jsonElementName: "baseTextureLocation"
+      jsonElementDesc: "<code>ResourceLocation</code> to a texture file of this part's texture"

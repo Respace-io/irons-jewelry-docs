@@ -8,15 +8,15 @@
       jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
     - jsonElementType: "string"
       jsonElementName: "type"
-      jsonElementDesc: "<code>ResourceLocation</code> used for JewelryType registry"
+      jsonElementDesc: "<code>ResourceLocation</code> pointing to a registered <code>JewelryType</code>"
     - jsonElementType: "boolean"
       jsonElementName: "unlockedByDefault"
       jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
       jsonElementOpt: true
     - jsonElementType: "double"
       jsonElementName: "qualityMultiplier"
-      jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
       jsonElementOpt: true
+      jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
     - jsonElementType: "string"
       jsonElementName: "partForQuality"
       jsonElementDesc: "<code>ResourceLocation</code> used to specify which part of the pattern will determine the overall quality"

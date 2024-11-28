@@ -128,7 +128,7 @@ public abstract class AssetHandler {
 
 In order to differentiate when the API should bake a new model for you, you must implement `AssetHandler#modelId`. You
 have the same parameters as `AssetHandler#makeBakedModelPreparations`, because these methods are used in tandem. You
-should implement an alogrithm that produces a unique and deterministic value for every unique model to display. For
+should implement an algorithm that produces a unique and deterministic value for every unique model to display. For
 example, if your model is driven by an item component, the id should be the item component's hash code. This ID is
 stored in conjunction with your modid, so you do not need to worry about competing ids with other mods (only yourself).
 
@@ -155,10 +155,10 @@ here: [https://docs.neoforged.net/docs/resources/client/models/modelloaders/](ht
 
 ## What is an Atlas?
 
-Atlas API allows for runtime generated atlases, so what is an Atlas? Also known as a spritesheet, an Atlas is a term in
-computer graphics that refers to a single large texture that is made up of many smaller textures stitched together.
 This is usually done to for game performance, where instead of loading separate texture files, only one atlas file is
 loaded, and the game knows how to find a specific texture on it. More about generic texture atlases can
+Atlas API allows for runtime generated atlases, so what is an Atlas? Also known as a spritesheet, an Atlas is a term in
+computer graphics that refers to a single large texture that is made up of many smaller textures stitched together.
 be [read here](https://en.wikipedia.org/wiki/Texture_atlas).
 * * *
 Minecraft's atlases are generated when the game loads, or when textures are reloaded. This means they are completely

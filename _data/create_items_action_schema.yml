@@ -4,13 +4,15 @@
   jsonElements:
     - jsonElementType: "quality_scalar"
       jsonElementName: "chance"
-      jsonElementDesc: "(Optional) <code>QualityScalar</code> representing the chance to create items"
+      jsonElementOpt: true
+      jsonElementDesc: "<code>QualityScalar</code> representing the chance to create items"
     - jsonElementType: "string"
       jsonElementName: "item"
       jsonElementDesc: "<code>ResourceLocation</code> pointing to an object of type <code>ITEM</code>"
     - jsonElementType: "string"
       jsonElementName: "sound"
-      jsonElementDesc: "(Optional) <code>ResourceLocation</code> pointing to an object of type <code>SOUND_EVENT</code>"
+      jsonElementOpt: true
+      jsonElementDesc: "<code>ResourceLocation</code> pointing to an object of type <code>SOUND_EVENT</code>"
     - jsonElementType: "quality_scalar"
       jsonElementName: "minCount"
       jsonElementDesc: "<code>QualityScalar</code> representing the minimum count of items to create"

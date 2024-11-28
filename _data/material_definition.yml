@@ -1,0 +1,37 @@
+- jsonElementType: "object"
+  jsonElementName: "MaterialDefinition"
+  jsonElementDesc: "Description goes here"
+  #jsonElementOpt: true
+  jsonElements:
+    - jsonElementType: "string"
+      jsonElementName: "descriptionId"
+      jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+    - jsonElementType: "object"
+      jsonElementName: "ingredient"
+      jsonElementDesc: "<code>Ingredient</code> for what items are used to create this material"
+    - jsonElementType: "array"
+      jsonElementName: "allowedMaterialTypes"
+      jsonElementDesc: "List of strings"
+      jsonElements:
+        - jsonElementType: "string"
+          jsonElementName: "String"
+          jsonElementDesc: "A material must have at least one matching tr in order to be allowed to be used to construct this part."
+    - jsonElementType: "string"
+      jsonElementName: "paletteLocation"
+      jsonElementDesc: "<code>ResourceLocation</code> pointing to the palette texture file for this material"
+    - jsonElementType: "double"
+      jsonElementName: "quality"
+      jsonElementDesc: "Quality value associated with this material."
+    - jsonElementType: "object"
+      jsonElementName: "bonusParameters"
+      jsonElementDesc: "<code>Map&lt;ParameterType&lt;T&gt;,T&gt;</code>"
+      jsonElements:
+        - jsonElementType: "string"
+          jsonElementName: "<code>ResourceLocation</code>"
+          jsonElementDesc: "Points to the ParameterType entry"
+          jsonElements:
+            - jsonElementType: "object"
+              jsonElementName: "<code>Bonus Parameter Value</code>"
+              jsonElementDesc: "Definition of a Parameter Type's value"
+
+

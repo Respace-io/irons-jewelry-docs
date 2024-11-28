@@ -13,16 +13,20 @@
       jsonElementDesc: "Description ID of the name of this explosion, used in the tooltip"
     - jsonElementType: "string"
       jsonElementName: "damage_type"
-      jsonElementDesc: "(Optional) <code>ResourceLocation</code> pointing to a <code>DamageType</code>. If present, the explosion will deal damage of this type"
+      jsonElementOpt: true
+      jsonElementDesc: "<code>ResourceLocation</code> pointing to a <code>DamageType</code>. If present, the explosion will deal damage of this type"
     - jsonElementType: "quality_scalar"
       jsonElementName: "knockback_multiplier"
-      jsonElementDesc: "(Optional) <code>QualityScalar</code> that will multiply the received knockback of affected entities"
+      jsonElementOpt: true
+      jsonElementDesc: "<code>QualityScalar</code> that will multiply the received knockback of affected entities"
     - jsonElementType: "holder_set"
       jsonElementName: "immune_blocks"
-      jsonElementDesc: "(Optional) Holder set of <code>ResourceLocation</code> that point to blocks which will not be affected by terrain damage, if this explosion does terrain damage"
+      jsonElementOpt: true
+      jsonElementDesc: "Holder set of <code>ResourceLocation</code> that point to blocks which will not be affected by terrain damage, if this explosion does terrain damage"
     - jsonElementType: "list"
       jsonElementName: "offset"
-      jsonElementDesc: "(Optional) <code>Vec3</code> to offset the origin point of the explosion"
+      jsonElementOpt: true
+      jsonElementDesc: "<code>Vec3</code> to offset the origin point of the explosion"
     - jsonElementType: "quality_scalar"
       jsonElementName: "radius"
       jsonElementDesc: "<code>QualityScalar</code> of the radius of the explosion. This affects damage"

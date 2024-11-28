@@ -1,0 +1,7 @@
+- jsonElementType: "object"
+  jsonElementName: "EffectParameter"
+  jsonElementDesc: "Root Object Desc"
+  jsonElements:
+    - jsonElementType: "string"
+      jsonElementName: "effect"
+      jsonElementDesc: "<code>ResourceLocation</code> pointing to a <code>MobEffect</code>"

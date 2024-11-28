@@ -1,0 +1,13 @@
+- jsonElementType: "object"
+  jsonElementName: "AttributeInstance"
+  jsonElementDesc: "Root Object Desc"
+  jsonElements:
+    - jsonElementType: "string"
+      jsonElementName: "attribute"
+      jsonElementDesc: "<code>ResourceLocation</code> pointing to an <code>Attribute</code>"
+    - jsonElementType: "double"
+      jsonElementName: "amount"
+      jsonElementDesc: "Value given by this attribute"
+    - jsonElementType: "string"
+      jsonElementName: "operation"
+      jsonElementDesc: "add_value | add_multiplied_base | add_multiplied_total"

@@ -7,4 +7,5 @@
       jsonElementDesc: "<code>QualityScalar</code> representing the freeze amount"
     - jsonElementType: "boolean"
       jsonElementName: "instaFreeze"
-      jsonElementDesc: "(Optional) Whether the freeze effect is instant; defaults to false"
+      jsonElementOpt: true
+      jsonElementDesc: "Whether the freeze effect is instant; defaults to false"

@@ -10,7 +10,9 @@
       jsonElementDesc: "<code>QualityScalar</code> of the amount of damage done"
     - jsonElementType: "double"
       jsonElementName: "maximum"
-      jsonElementDesc: "(Optional) Damage value cap"
+      jsonElementOpt: true
+      jsonElementDesc: "Damage value cap"
     - jsonElementType: "string"
       jsonElementName: "sound"
-      jsonElementDesc: "(Optional) <code>ResourceLocation</code> of a SoundEvent. If present, the sound is played when damage occurs."
+      jsonElementOpt: true
+      jsonElementDesc: "<code>ResourceLocation</code> of a SoundEvent. If present, the sound is played when damage occurs."
