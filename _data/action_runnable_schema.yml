@@ -1,6 +1,6 @@
 - jsonElementType: "object"
   jsonElementName: "ActionRunnable"
-  jsonElementDesc: "Root Object Desc"
+  jsonElementDesc: "Object holding the information to run an action to the bonus's specifications"
   jsonElements:
     - jsonElementType: "boolean"
       jsonElementName: "applyToSelf"
@@ -14,3 +14,4 @@
           jsonElementDesc: "<code>ResourceLocation</code> pointing to a registered action"
         - jsonElementType: "object"
           jsonElementName: "Action"
+          jsonElementDesc: "Definition of any registered action schema"

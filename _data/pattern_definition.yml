@@ -1,22 +1,20 @@
 - jsonElementType: "object"
   jsonElementName: "PatternDefinition"
-  jsonElementDesc: "Description goes here"
-  #jsonElementOpt: true
   jsonElements:
     - jsonElementType: "string"
       jsonElementName: "descriptionId"
-      jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+      jsonElementDesc: "String denoting language file entry"
     - jsonElementType: "string"
       jsonElementName: "type"
       jsonElementDesc: "<code>ResourceLocation</code> pointing to a registered <code>JewelryType</code>"
     - jsonElementType: "boolean"
       jsonElementName: "unlockedByDefault"
-      jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+      jsonElementDesc: "Whether this pattern is always available in the jewelcrafting station, or must be unlocked before it can be crafted"
       jsonElementOpt: true
     - jsonElementType: "double"
       jsonElementName: "qualityMultiplier"
       jsonElementOpt: true
-      jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+      jsonElementDesc: "Multiplies overall quality of the buffs received from a completed item of this pattern"
     - jsonElementType: "string"
       jsonElementName: "partForQuality"
       jsonElementDesc: "<code>ResourceLocation</code> used to specify which part of the pattern will determine the overall quality"
@@ -33,10 +31,10 @@
             jsonElementDesc: "ResourceLocation of <code>PartDefinition</code>"
           - jsonElementType: "int"
             jsonElementName: "materialCost"
-            jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+            jsonElementDesc: "Count of items required to craft this part in the jewelcrafting station"
           - jsonElementType: "int"
             jsonElementName: "drawOrder"
-            jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+            jsonElementDesc: "Sort order for drawing this sprite. Lower numbers are drawn first (appear at the bottom)"
           - jsonElementType: "array"
             jsonElementName: "bonuses"
             jsonElementOpt: true
@@ -44,14 +42,14 @@
             jsonElements:
             - jsonElementType: "object"
               jsonElementName: "Bonus"
-              jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+              jsonElementDesc: "Object holding data to construct a buff for this jewelry piece when worn"
               jsonElements:
               - jsonElementType: "string"
                 jsonElementName: "bonusType"
                 jsonElementDesc: "ResourceLocation used for BonusType registry"
               - jsonElementType: "double"
                 jsonElementName: "qualityMultiplier"
-                jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+                jsonElementDesc: "Multiplies overall quality of the buff received from this bonus"
               - jsonElementType: "quality_scalar"
                 jsonElementName: "cooldown"
                 jsonElementOpt: true

@@ -10,6 +10,9 @@
       jsonElementDesc: "Amount that increases with respect to the bonus's quality"
     - jsonElementType: "double"
       jsonElementName: "min"
-      jsonElementDesc: "(Optional: default 0.0) Minimum value for the absolute value of the scalar's quantity"
+      jsonElementDesc: "(Optional: default 0.0) Minimum magnitude for the scalar's quantity when sampled"
     - jsonElementType: "double"
       jsonElementName: "max"
+      jsonElementOpt: true
+      jsonElementDesc: "Maximum magnitude for the scalar's quantity when sampled"
+

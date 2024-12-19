@@ -4,6 +4,9 @@ icon: fas fa-code
 order: 3
 toc: true
 ---
+⚠️This page is Work in Progress! ⚠️ If you're looking for developmental help or want to shape the roadmap, you can join us on Discord:
+
+<a href="https://discord.gg/TRzEdrndM2"><img src="https://img.shields.io/discord/1104430139275743293.svg?label=&amp;logo=discord&amp;logoColor=ffffff&amp;color=7389D8&amp;labelColor=6A7EC2&amp;style=for-the-badge" alt="" width="129" height="28" /></a>
 
 ## Patterns, Parts, and Materials
 
@@ -28,34 +31,53 @@ Part Definitions are the definitions for the individual components that can be u
 ### Material Definitions
 Material Definitions are used to associate items with a material that can be used in jewelcrafting, as well as the bonuses it provides, and rendering information. This is where the specific bonus parameters are defined, such as "Gold gives *x* attribute, or does *y* action".
 {% include json-root.html jsonSchema=site.data.material_definition %}
+### Quality Scalars
+Throughout many other schemas, you will see Quality Scalars. This is a number provider that scales based on the quality of a piece of jewelry. It can scale positively or negatively, such as a buff duration or cooldown time.
+{% include json-root.html jsonSchema=site.data.quality_scalar_schema %}
 
 ## Registered Types
 
 ### Jewelry Types
-
+Jewelry Types provide the association between a pattern and an item. Custom jewelry types can be registered through code.
 - `irons_jewelry:ring`
 - `irons_jewelry:necklace`
 
 ### Bonus Types
-
+Bonus types are registered behaviors that execute on an input bonus parameter. Custom bonus types can be made through code.
 - `irons_jewelry:piglin_neutral_bonus`
+  - Utilizes `irons_jewelry:empty` parameter type
+  - Makes piglins neutral to the wearer
 - `irons_jewelry:attribute_bonus`
+  - Utilizes [Attribute](/data-format/#bonus-parameter-types) parameter type
+  - Provides an attribute modifier to the wearer
 - `irons_jewelry:effect_on_hit_bonus`
+  - Utilizes [Positive Effect](/data-format/#bonus-parameter-types) parameter type
+  - Applies a mob effect to wearer when the wearer hits an entity
 - `irons_jewelry:on_projectile_hit_bonus`
+  - Utilizes [Action](/data-format/#bonus-parameter-types) parameter type
+  - Executes an action when the wearer hits an entity with a projectile
 - `irons_jewelry:on_attack_bonus`
+  - Utilizes [Action](/data-format/#bonus-parameter-types) parameter type
+  - Executes an action when the wearer attacks an entity directly
 - `irons_jewelry:effect_immunity_bonus`
+  - Utilizes [Negative Effect](/data-format/#bonus-parameter-types) parameter type
+  - Grants immunity to a mob effect
 - `irons_jewelry:on_shield_block_bonus`
+  - Utilizes [Action](/data-format/#bonus-parameter-types) parameter type
+  - Executes an action when the wearer blocks an attack with a shield
 - `irons_jewelry:on_take_damage_bonus`
+  - Utilizes [Action](/data-format/#bonus-parameter-types) parameter type
+  - Executes an action when the wearer takes damage
 
 ### Bonus Parameter Types
-
-- `irons_jewelry:attribute` -> [Attribute Instance](/data-format/#attribute-instance)
-- `irons_jewelry:positive_effect` -> [EffectParameter](/data-format/#effect-parameter)
-- `irons_jewelry:negative_effect` -> [EffectParameter](/data-format/#effect-parameter)
-- `irons_jewelry:action` -> [Action Runnable](/data-format/#action-runnable)
+Bonus Parameter Types are a registered type object associated with a data class. This data class is used as context for the behavior of a bonus type. The instances of these data objects live on the material definition, which are picked based on the material a jewelry is made out of. 
+- `irons_jewelry:attribute` (See [Attribute Instance](/data-format/#attribute-instance) schema)
+- `irons_jewelry:positive_effect` (See [EffectParameter](/data-format/#effect-parameter) schema)
+- `irons_jewelry:negative_effect` (See [EffectParameter](/data-format/#effect-parameter) schema)
+- `irons_jewelry:action` (See [Action Runnable](/data-format/#action-runnable) schema)
 
 ## Bonus Parameter Values
-
+Arbitrary data objects instances that hold data for the behavior of a bonus type to act upon.
 ##### Attribute Instance
 
 {% include json-root.html jsonSchema=site.data.attribute_instance_schema %}
@@ -69,15 +91,15 @@ Material Definitions are used to associate items with a material that can be use
 {% include json-root.html jsonSchema=site.data.action_runnable_schema %}
 
 #### Actions
-
-- `irons_jewelry:knockback` -> [Knockback](/data-format/#knockback)
-- `irons_jewelry:ignite` -> [Ignite](/data-format/#ignite)
-- `irons_jewelry:apply_effect` -> [Apply Effect](/data-format/#apply-effect)
-- `irons_jewelry:apply_damage` -> [Apply Damage](/data-format/#apply-damage)
-- `irons_jewelry:apply_freeze` -> [Apply Freeze](/data-format/#apply-freeze)
-- `irons_jewelry:heal` -> [Heal](/data-format/#heal)
-- `irons_jewelry:explode` -> [Explode](/data-format/#explode)
-- `irons_jewelry:create_items` -> [Create Items](/data-format/#create-items)
+Action are special buffs that, when triggered, actually *do* something. Custom Actions can be registered through code. The following actions exist by default:
+- `irons_jewelry:knockback` (See [Knockback](/data-format/#knockback) schema)
+- `irons_jewelry:ignite` (See [Ignite](/data-format/#ignite) schema)
+- `irons_jewelry:apply_effect` (See [Apply Effect](/data-format/#apply-effect) schema)
+- `irons_jewelry:apply_damage` (See [Apply Damage](/data-format/#apply-damage) schema)
+- `irons_jewelry:apply_freeze` (See [Apply Freeze](/data-format/#apply-freeze) schema)
+- `irons_jewelry:heal` (See [Heal](/data-format/#heal) schema)
+- `irons_jewelry:explode` (See [Explode](/data-format/#explode) schema)
+- `irons_jewelry:create_items` (See [Create Items](/data-format/#create-items) schema)
 
 ## Action Schemas
 

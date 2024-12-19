@@ -1,11 +1,9 @@
 - jsonElementType: "object"
   jsonElementName: "MaterialDefinition"
-  jsonElementDesc: "Description goes here"
-  #jsonElementOpt: true
   jsonElements:
     - jsonElementType: "string"
       jsonElementName: "descriptionId"
-      jsonElementDesc: "DESCRIPTION_PLACEHOLDER"
+      jsonElementDesc: "String denoting language file entry"
     - jsonElementType: "object"
       jsonElementName: "ingredient"
       jsonElementDesc: "<code>Ingredient</code> for what items are used to create this material"

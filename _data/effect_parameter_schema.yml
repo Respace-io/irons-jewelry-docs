@@ -1,6 +1,6 @@
 - jsonElementType: "object"
   jsonElementName: "EffectParameter"
-  jsonElementDesc: "Root Object Desc"
+  jsonElementDesc: "Object providing a <code>MobEffect</code> for the bonus to utilize"
   jsonElements:
     - jsonElementType: "string"
       jsonElementName: "effect"

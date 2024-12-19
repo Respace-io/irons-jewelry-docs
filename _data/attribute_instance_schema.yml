@@ -1,6 +1,6 @@
 - jsonElementType: "object"
   jsonElementName: "AttributeInstance"
-  jsonElementDesc: "Root Object Desc"
+  jsonElementDesc: "Object holding the information to build an attribute modifier for a piece of jewelry"
   jsonElements:
     - jsonElementType: "string"
       jsonElementName: "attribute"
