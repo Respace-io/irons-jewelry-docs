@@ -21,6 +21,10 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.0.2] (1.21) 2024-12-23</span>
+### Fixes
+- Fixed disconnection issue on dedicated servers caused by material modifiers
+
 ## <span class="yellow"> [1.0.1] (1.21) 2024-12-23</span>
 ### Additions
 - Added `MaterialModifiers`
