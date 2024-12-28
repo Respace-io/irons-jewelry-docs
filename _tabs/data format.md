@@ -29,10 +29,12 @@ Part Definitions are the definitions for the individual components that can be u
 {% include json-root.html jsonSchema=site.data.part_definition %}
 <p></p>
 ### Material Definitions
-Material Definitions are used to associate items with a material that can be used in jewelcrafting, as well as the bonuses it provides, and rendering information. This is where the specific bonus parameters are defined, such as "Gold gives *x* attribute, or does *y* action".
+Material Definitions associate ingredient items with a material that can be used in jewelcrafting. Defined here are the specific bonus parameters the material awards, as well as rendering information. A material can host multiple parameter entries, which are used as input for the overall pattern's bonus. For example, if a ring pattern grants an attribute bonus, the material of the ring provides the specific attribute.
 {% include json-root.html jsonSchema=site.data.material_definition %}
 ### Quality Scalars
-Throughout many other schemas, you will see Quality Scalars. This is a number provider that scales based on the quality of a piece of jewelry. It can scale positively or negatively, such as a buff duration or cooldown time.
+Throughout many other schemas, you will see Quality Scalars. This is a number provider that scales based on the quality of a piece of jewelry. It can scale positively or negatively, such as a buff duration or cooldown time. The sampled number has the formula:
+`base + (q - 1) * scalar` for some input quality `q`.
+
 {% include json-root.html jsonSchema=site.data.quality_scalar_schema %}
 
 ## Registered Types
@@ -77,16 +79,15 @@ Bonus Parameter Types are a registered type object associated with a data class.
 - `irons_jewelry:action` (See [Action Runnable](/data-format/#action-runnable) schema)
 
 ## Bonus Parameter Values
-Arbitrary data objects instances that hold data for the behavior of a bonus type to act upon.
-##### Attribute Instance
+### Attribute Instance
 
 {% include json-root.html jsonSchema=site.data.attribute_instance_schema %}
 
-##### Effect Parameter
+### Effect Parameter
 
 {% include json-root.html jsonSchema=site.data.effect_parameter_schema %}
 
-#### Action Runnable
+### Action Runnable
 
 {% include json-root.html jsonSchema=site.data.action_runnable_schema %}
 

@@ -9,15 +9,16 @@
       jsonElementDesc: "<code>ResourceLocation</code> pointing to a registered <code>JewelryType</code>"
     - jsonElementType: "boolean"
       jsonElementName: "unlockedByDefault"
-      jsonElementDesc: "Whether this pattern is always available in the jewelcrafting station, or must be unlocked before it can be crafted"
+      jsonElementDesc: "(Default: <code>true</code>) Whether this pattern is always available in the jewelcrafting station, or must be unlocked before it can be crafted"
       jsonElementOpt: true
     - jsonElementType: "double"
       jsonElementName: "qualityMultiplier"
       jsonElementOpt: true
-      jsonElementDesc: "Multiplies overall quality of the buffs received from a completed item of this pattern"
+      jsonElementDesc: "(Default: <code>1.0</code>) Multiplies overall quality of the buffs received from a completed item of this pattern"
     - jsonElementType: "string"
       jsonElementName: "partForQuality"
-      jsonElementDesc: "<code>ResourceLocation</code> used to specify which part of the pattern will determine the overall quality"
+      jsonElementDesc: "<code>ResourceLocation</code> used to specify which part of the pattern will determine the overall quality. If absent, the base quality is 1.0"
+      jsonElementOpt: true
     - jsonElementType: "array"
       jsonElementName: "parts"
       jsonElementDesc: "Array of <code>PartIngredient</code>"
@@ -53,9 +54,9 @@
               - jsonElementType: "quality_scalar"
                 jsonElementName: "cooldown"
                 jsonElementOpt: true
-                jsonElementDesc: "<code>QualityScalar</code>"
+                jsonElementDesc: "<code>QualityScalar</code> providing a cooldown in ticks. Not all bonuses utilize cooldowns."
               - jsonElementType: "object"
                 jsonElementName: "parameterType"
                 jsonElementOpt: true
-                jsonElementDesc: "<code>Tuple&lt;ParameterType&lt;T&gt;,T&gt;</code>"
+                jsonElementDesc: "<code>Tuple&lt;ParameterType&lt;T&gt;,T&gt;</code>. If present, overrides the bonus parameter that would have been selected from the material this part is made out of."
 
