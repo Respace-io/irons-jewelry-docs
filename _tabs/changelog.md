@@ -21,6 +21,10 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.0.4] (1.21.1) 2025-01-11</span>
+# API
+- Updated to official Curios API
+
 ## <span class="yellow"> [1.0.3] (1.21.1) 2024-12-27</span>
 ### Fixes
 - Fixed tooltip compatibility between Curios API ports
