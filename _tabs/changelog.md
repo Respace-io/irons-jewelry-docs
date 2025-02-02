@@ -21,6 +21,17 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.0.6] (1.21.1) 2024-02-02</span>
+### Changes
+- Added all possible Artisan Scroll items to creative menu and JEI
+
+### Fixes
+- Fixed Jewelcrafting Station block not having an effective tool (now axe)
+
+## <span class="yellow"> [1.0.5] (1.21.1) 2024-01-25</span>
+### Fixes
+- Fixed nullable JEI plugin handling
+
 ## <span class="yellow"> [1.0.4] (1.21.1) 2025-01-11</span>
 # API
 - Updated to official Curios API
