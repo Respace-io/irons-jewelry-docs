@@ -18,7 +18,7 @@ clearing, and texture reloads; all you do is tell the API where your textures ar
 ## Dependency Setup
 
 In order to build against Atlas API, you need to configure your `build.gradle` file.
-You will need as least one of the following mavens under `repositories`.
+You will need at least one of the following mavens under `repositories`.
 If you are not interested in building with snapshots, you only need the release maven.
 
 ```groovy
@@ -39,7 +39,7 @@ compileOnly "io.redspace:atlas_api:${atlas_api_version}:api"
 localRuntime "io.redspace:atlas_api:${atlas_api_version}"
 ```
 
-This assumes you have gradle variable `atlas_api_version` setup. Additionally, you may want to use the Atlas Viewer mod
+Additionally, you may want to use the Atlas Viewer mod
 when developing to see your dynamic
 atlas: [curseforge.com/minecraft/mc-mods/atlasviewer](https://www.curseforge.com/minecraft/mc-mods/atlasviewer)
 

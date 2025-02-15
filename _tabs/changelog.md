@@ -21,6 +21,14 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.0.8] (1.21.1) 2024-02-15</span>
+### Fixes
+- Jewelry trades can no longer generate with a cost of zero
+
+## <span class="yellow"> [1.0.7] (1.21.1) 2024-02-06</span>
+### Fixes
+- Fixed JewelryData equals implementation
+
 ## <span class="yellow"> [1.0.6] (1.21.1) 2024-02-02</span>
 ### Changes
 - Added all possible Artisan Scroll items to creative menu and JEI
@@ -33,7 +41,7 @@ color:rgba(0, 120, 36, 0.81)
 - Fixed nullable JEI plugin handling
 
 ## <span class="yellow"> [1.0.4] (1.21.1) 2025-01-11</span>
-# API
+### API
 - Updated to official Curios API
 
 ## <span class="yellow"> [1.0.3] (1.21.1) 2024-12-27</span>
