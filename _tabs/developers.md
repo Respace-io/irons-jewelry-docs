@@ -18,6 +18,7 @@ An addon gives much more ability to implement new content, such as
 - Bonus Types
 - Action Types
 - Pattern, Part, and Material data generators
+
 ## Dependency Setup
 
 In order to build against Gems 'n Jewelry, you need to configure your `build.gradle` file.
