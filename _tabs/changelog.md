@@ -21,6 +21,10 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.0.9] (1.21.1) 2024-02-25</span>
+### Fixes
+- Jewelry trades can no longer generate with a secondary cost of zero
+
 ## <span class="yellow"> [1.0.8] (1.21.1) 2024-02-15</span>
 ### Fixes
 - Jewelry trades can no longer generate with a cost of zero
