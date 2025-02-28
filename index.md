@@ -7,7 +7,7 @@ pin: true
 
 ![Loader](https://img.shields.io/badge/Loader-NeoForge-ecebe6?labelColor=d394fa&style=for-the-badge) ![Available](https://img.shields.io/badge/Available-1.21-ecebe6?labelColor=d394fa&style=for-the-badge) [![Discord](https://img.shields.io/discord/1104430139275743293.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2&style=for-the-badge)](https://discord.gg/TRzEdrndM2) [![Patreon](https://shields.io/badge/-Patreon-f86754?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/Iron431)
 
-![https://media.forgecdn.net/attachments/1022/978/placeholder-logo.png](https://media.forgecdn.net/attachments/1023/478/iron431purplesilver.png)
+![https://media.forgecdn.net/attachments/1110/219/logorubyredsilver-png.png](https://media.forgecdn.net/attachments/1110/219/logorubyredsilver-png.png)
 
 #### Step into the world of jewelcrafting, by dynamically crafting pieces of jewelry from a variety of patterns and materials. Scour the lands for powerful jewelcrafting patterns, and perfect your precious materials into prized possessions!
 
