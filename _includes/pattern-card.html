@@ -7,22 +7,22 @@
       <div style="min-width: 130px; max-width: 130px; float: left">
         <div id="image_wrapper" style="position: relative">
           <img src="/img/item_frame.png" style="width: 120px; image-rendering: pixelated; position: relative; top:0; left: 0;">
-          <img src="{{pattern.icon}}" style="width: 80px; image-rendering: pixelated; position: absolute; top: 36px; left: 20px;">
+          <img src="{{pattern.icon}}" style="width: 80px; image-rendering: pixelated; position: absolute; top: 20px; left: 20px;">
         </div>
       </div>
       <div style="width: 80%; float: left">
         <table style="width: 100%">
           <tr>
             <td class="pattern-cell-label" >Unlocked by default:</td>
-            <td class="pattern-cell-data">t or f</td>
+            <td class="pattern-cell-data">{{pattern.locked}}</td>
           </tr>
           <tr>
             <td class="pattern-cell-label" >Part for quality:</td>
-            <td class="pattern-cell-data">Part name</td>
+            <td class="pattern-cell-data">{{pattern.part_for_quality}}</td>
           </tr>
           <tr>
             <td class="pattern-cell-label" >Quality multiplier:</td>
-            <td class="pattern-cell-data">xxx.xx</td>
+            <td class="pattern-cell-data">x{{pattern.quality}}</td>
           </tr>
         </table>
       </div>
@@ -34,13 +34,13 @@
             <td style="font-weight: bold; padding-left:10px ">Parts</td>
           </tr>
           <tr>
-            <td class="pattern-cell-data">part 1</td>
+            <td class="pattern-cell-data">{{pattern.part1}}</td>
           </tr>
           <tr>
-            <td class="pattern-cell-data">part 1</td>
+            <td class="pattern-cell-data">{{pattern.part2}}</td>
           </tr>
           <tr>
-            <td class="pattern-cell-data">part 1</td>
+            <td class="pattern-cell-data">{{pattern.part3}}</td>
           </tr>
         </table>
       </div>
@@ -50,13 +50,13 @@
             <td style="font-weight: bold; padding-left:10px">Bonuses</td>
           </tr>
           <tr>
-            <td class="pattern-cell-data">bonus 1</td>
+            <td class="pattern-cell-data">{{pattern.bonus1}}</td>
           </tr>
           <tr>
-            <td class="pattern-cell-data">bonus 1</td>
+            <td class="pattern-cell-data">{{pattern.bonus2}}</td>
           </tr>
           <tr>
-            <td class="pattern-cell-data">bonus 1</td>
+            <td class="pattern-cell-data">{{pattern.bonus3}}</td>
           </tr>
         </table>
       </div>
