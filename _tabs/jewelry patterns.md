@@ -1,8 +1,23 @@
 ---
 layout: post
-icon: fa-solid fa-scroll
-order: 2
+icon: fas fa-scroll
+order: 1
 toc: true
 ---
+<style>
+.table-wrapper {
+  --tb-even-bg: #2C2B2B;
+  --tb-odd-bg: #2C2B2B;
+}
+</style>
 
-This page is Work in Progress!
+{% assign sorted_patterns = site.data.pattern_data | sort: 'quality' %}
+{% for pattern in sorted_patterns %}
+  {% include pattern-card.html %}
+{% endfor %}
+
+<!-- buffer for the TOC -->
+<div style="height: 800px"></div>
+
+
+

@@ -1,0 +1,13 @@
+- name: "Example Pattern"
+  icon: "/img/patterns/example_pattern.png"
+  locked: "<Locked/Unlocked> by Default"
+  part_for_quality: "Example Part"
+  quality: 1.25
+  part1: "Example Part"
+  part2: "Example Gem"
+  part3: ""
+  part4: ""
+  bonus1: "Attribute (From Example Part)"
+  bonus2: ""
+  bonus3: ""
+  bonus4: ""
