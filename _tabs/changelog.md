@@ -21,6 +21,14 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.0.11] (1.21.1) 2024-03-22</span>
+### Fixes
+- Fixed self-inflicted damage causing stack overflow with protection amulet
+
+## <span class="yellow"> [1.0.10] (1.21.1) 2024-03-19</span>
+### Additions
+- Added Chinese localizations, thanks to Hanekmio
+
 ## <span class="yellow"> [1.0.9] (1.21.1) 2024-02-25</span>
 ### Fixes
 - Jewelry trades can no longer generate with a secondary cost of zero
