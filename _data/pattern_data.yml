@@ -1,6 +1,6 @@
 - name: "Amulet Of Protection"
   icon: "/img/patterns/amulet_of_protection.png"
-  locked: "Locked by Default"
+  locked: "No"
   part_for_quality: "Chain"
   quality: 1.5
   part1: "Chain (6 - Metal)"
@@ -14,7 +14,7 @@
 
 - name: "Barbed Band"
   icon: "/img/patterns/barbed_band.png"
-  locked: "Locked by Default"
+  locked: "No"
   part_for_quality: "Gemstone"
   quality: 3.0
   part1: "Barbed Band (8 - Metal)"
@@ -28,7 +28,7 @@
 
 - name: "Gemset Ring"
   icon: "/img/patterns/gemset_ring.png"
-  locked: "Unlocked by Default"
+  locked: "Yes"
   part_for_quality: "Band"
   quality: 1.0
   part1: "Band (4 - Metal)"
@@ -40,9 +40,23 @@
   bonus3: ""
   bonus4: ""
 
+- name: "Ring Of Haggling"
+  icon: "/img/patterns/haggler_ring.png"
+  locked: "No"
+  part_for_quality: "Band"
+  quality: 2.0
+  part1: "Band (4 - Metal)"
+  part2: "Haggler's Stone (4 - Emerald)"
+  part3: ""
+  part4: ""
+  bonus1: "Trade Discount (From Haggler's Stone)"
+  bonus2: ""
+  bonus3: ""
+  bonus4: ""
+
 - name: "Improved Gemset Ring"
   icon: "/img/patterns/improved_gemset_ring.png"
-  locked: "Locked by Default"
+  locked: "No"
   part_for_quality: "Band"
   quality: 1.5
   part1: "Band (6 - Metal)"
@@ -56,7 +70,7 @@
 
 - name: "Piglin Signet Ring"
   icon: "/img/patterns/piglin_signet_ring.png"
-  locked: "Locked by Default"
+  locked: "No"
   part_for_quality: "None"
   quality: 2.0
   part1: "Band (4 - Metal)"
@@ -70,7 +84,7 @@
 
 - name: "Sharpshooter's Loop"
   icon: "/img/patterns/sharpshooter_loop.png"
-  locked: "Locked by Default"
+  locked: "No"
   part_for_quality: "Band"
   quality: 1.0
   part1: "Band (6 - Metal)"
@@ -84,7 +98,7 @@
 
 - name: "Simple Amulet"
   icon: "/img/patterns/simple_amulet.png"
-  locked: "Unlocked by Default"
+  locked: "Yes"
   part_for_quality: "Chain"
   quality: 1.0
   part1: "Chain (4 - Metal)"
@@ -98,7 +112,7 @@
 
 - name: "Simple Ring"
   icon: "/img/patterns/simple_band.png"
-  locked: "Unlocked by Default"
+  locked: "Yes"
   part_for_quality: "None"
   quality: 0.75
   part1: "Band (4 - Metal)"
@@ -112,7 +126,7 @@
 
 - name: "Simple Chain"
   icon: "/img/patterns/simple_chain.png"
-  locked: "Unlocked by Default"
+  locked: "Yes"
   part_for_quality: "None"
   quality: 1.0
   part1: "Chain (4 - Metal)"
@@ -126,7 +140,7 @@
 
 - name: "Stalwart Ring"
   icon: "/img/patterns/stalwart_ring.png"
-  locked: "Locked by Default"
+  locked: "No"
   part_for_quality: "None"
   quality: 1.0
   part1: "Stalwart Band (6 - Metal)"
@@ -140,7 +154,7 @@
 
 - name: "Superior Gemset Ring"
   icon: "/img/patterns/superior_gemset_ring.png"
-  locked: "Locked by Default"
+  locked: "No"
   part_for_quality: "Improved Band"
   quality: 1.75
   part1: "Improved Band (6 - Metal)"
@@ -154,7 +168,7 @@
 
 - name: "Tearstone Ring"
   icon: "/img/patterns/tearstone_ring.png"
-  locked: "Locked by Default"
+  locked: "No"
   part_for_quality: "None"
   quality: 1.5
   part1: "Band (4 - Metal)"

@@ -21,6 +21,18 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.1.0] (1.21.1) 2024-04-14</span>
+### Additions
+- Added Ring of Haggling pattern
+  - "Unique"-styled ring that gives discount to villager trading when worn
+  - Pattern can only be obtained via villager trading
+### Changes
+- Jei Jewelcrafting previews now use dedicated "Example" material (instead of platinum)
+- Jei Jewelcrafting previews now describe their Bonuses granted when crafted
+- Pressing Jei "uses" key on an Artisan Scroll now shows the recipe for the contained pattern
+- Adjusted Emerald and Copper Palettes
+- Adjusted all ring band textures, which now show gem settings where the gems sit, which is visible during intermediary crafting textures
+
 ## <span class="yellow"> [1.0.11] (1.21.1) 2024-03-22</span>
 ### Fixes
 - Fixed self-inflicted damage causing stack overflow with protection amulet
