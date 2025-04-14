@@ -26,6 +26,7 @@ color:rgba(0, 120, 36, 0.81)
 - Added Ring of Haggling pattern
   - "Unique"-styled ring that gives discount to villager trading when worn
   - Pattern can only be obtained via villager trading
+
 ### Changes
 - Jei Jewelcrafting previews now use dedicated "Example" material (instead of platinum)
 - Jei Jewelcrafting previews now describe their Bonuses granted when crafted
