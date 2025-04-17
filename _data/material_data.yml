@@ -1,14 +1,14 @@
 - name: "Amethyst"
-  icon: "/img/materials/amethyst.png"
+  icon: "/img/materials/amethyst_shard.png"
   source: "Vanilla"
   quality: 1.0
   types: "Gem"
-  bonus_types: "Attribute,Positive Effect,Negative Effect,Action"
-  bonus_values: "+1 Armor Pierce,Regeneration,Poison,Apply Damage"
+  bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
+  bonus_values: "+1 Armor Pierce;Regeneration;Poison;Apply Damage (3.0 Thorns Damage)"
   sort: "65"
 
 - name: "Brass"
-  icon: "/img/materials/brass.png"
+  icon: "/img/materials/brass_ingot.png"
   source: "Requires Addon"
   quality: 0.75
   types: "Metal"
@@ -17,7 +17,7 @@
   sort: "1066"
 
 - name: "Bronze"
-  icon: "/img/materials/bronze.png"
+  icon: "/img/materials/bronze_ingot.png"
   source: "Requires Addon"
   quality: 1.0
   types: "Metal"
@@ -26,12 +26,12 @@
   sort: "1066"
 
 - name: "Copper"
-  icon: "/img/materials/copper.png"
+  icon: "/img/materials/copper_ingot.png"
   source: "Vanilla"
   quality: 0.5
   types: "Metal"
-  bonus_types: "Attribute,Positive Effect,Negative Effect,Action"
-  bonus_values: "+10% Attack Speed,Haste,Poison,Apply Damage"
+  bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
+  bonus_values: "+10% Attack Speed;Haste;Poison;Apply Damage (3.0 Lightning Damage)"
   sort: "67"
 
 - name: "Diamond"
@@ -39,8 +39,8 @@
   source: "Vanilla"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute,Positive Effect,Negative Effect,Action"
-  bonus_values: "+2 Armor,Resistance,Weakness,Apply Damage"
+  bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
+  bonus_values: "+2 Armor;Resistance;Weakness;Apply Damage (1.0 Magic Damage)"
   sort: "68"
 
 - name: "Emerald"
@@ -48,8 +48,8 @@
   source: "Vanilla"
   quality: 1.5
   types: "Gem"
-  bonus_types: "Attribute,Positive Effect,Action"
-  bonus_values: "+5% Speed,Speed,Create Items"
+  bonus_types: "Attribute;Positive Effect;Action"
+  bonus_values: "+5% Speed;Speed;Create Items (5% chance to Create 1-4 Emerald Items)"
   sort: "69"
 
 - name: "Garnet"
@@ -57,35 +57,35 @@
   source: "Gems 'n Jewelry"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute,Action"
-  bonus_values: "+4% Attack Damage,Heal"
+  bonus_types: "Attribute;Action"
+  bonus_values: "+4% Attack Damage;Heal (4.0 Base Healing)"
   sort: "171"
 
 - name: "Gold"
-  icon: "/img/materials/gold.png"
+  icon: "/img/materials/gold_ingot.png"
   source: "Vanilla"
   quality: 1.5
   types: "Metal"
-  bonus_types: "Attribute,Positive Effect,Negative Effect,Action"
-  bonus_values: "+10% Mining Speed,Fire Resistance,Poison,Ignite"
+  bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
+  bonus_values: "+10% Mining Speed;Fire Resistance;Poison;Ignite"
   sort: "71"
 
 - name: "Iron"
-  icon: "/img/materials/iron.png"
+  icon: "/img/materials/iron_ingot.png"
   source: "Vanilla"
   quality: 0.75
   types: "Metal"
-  bonus_types: "Attribute,Positive Effect,Negative Effect,Action"
-  bonus_values: "+2 Armor,Resistance,Slowness,Apply Knockback"
+  bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
+  bonus_values: "+2 Armor;Resistance;Slowness;Apply Knockback"
   sort: "73"
 
 - name: "Lapis Lazuli"
-  icon: "/img/materials/lapis.png"
+  icon: "/img/materials/lapis_lazuli.png"
   source: "Vanilla"
   quality: 1.0
   types: "Gem"
-  bonus_types: "Attribute,Action"
-  bonus_values: "+10% Experience Gained,Apply Effect"
+  bonus_types: "Attribute;Action"
+  bonus_values: "+10% Experience Gained;Apply Effect (Slowness I, 0:04)"
   sort: "76"
 
 - name: "Moonstone"
@@ -93,17 +93,17 @@
   source: "Gems 'n Jewelry"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute,Negative Effect,Action"
-  bonus_values: "+10% Arrow Damage,Blindness,Create Explosion"
+  bonus_types: "Attribute;Negative Effect;Action"
+  bonus_values: "+10% Arrow Damage;Blindness;Create Explosion (Create a Wind Burst explosion, 2 Block Radius)"
   sort: "177"
 
 - name: "Netherite"
-  icon: "/img/materials/netherite.png"
+  icon: "/img/materials/netherite_ingot.png"
   source: "Vanilla"
   quality: 2.5
   types: "Metal"
-  bonus_types: "Attribute,Positive Effect,Negative Effect,Action"
-  bonus_values: "+5% Attack Damage,Strength,Wither,Apply Effect"
+  bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
+  bonus_values: "+5% Attack Damage;Strength;Wither;Apply Effect (Strength I, 0:06)"
   sort: "78"
 
 - name: "Onyx"
@@ -111,8 +111,8 @@
   source: "Gems 'n Jewelry"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute,Negative Effect,Action"
-  bonus_values: "+0.15 Crit Damage,Blindness,Heal"
+  bonus_types: "Attribute;Negative Effect;Action"
+  bonus_values: "+0.15 Crit Damage;Blindness;Heal (4.0 Base Healing)"
   sort: "179"
 
 - name: "Peridot"
@@ -120,17 +120,17 @@
   source: "Requires Addon"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute,Negative Effect,Positive Effect,Action"
-  bonus_values: "+10% Mining Speed,Poison,Haste,Apply Knockback"
+  bonus_types: "Attribute;Negative Effect;Positive Effect;Action"
+  bonus_values: "+10% Mining Speed;Poison;Haste;Apply Knockback"
   sort: "1080"
 
 - name: "Platinum"
-  icon: "/img/materials/platinum.png"
+  icon: "/img/materials/platinum_ingot.png"
   source: "Requires Addon"
   quality: 2.0
   types: "Metal"
-  bonus_types: "Attribute,Positive Effect,Negative Effect,Action"
-  bonus_values: "+1 Armor Pierce,Resistance,Weakness,Apply Knockback"
+  bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
+  bonus_values: "+1 Armor Pierce;Resistance;Weakness;Apply Knockback"
   sort: "1080"
 
 - name: "Ruby"
@@ -138,8 +138,8 @@
   source: "Requires Addon"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute,Negative Effect,Action"
-  bonus_values: "+2 Max Health,Hunger,Ignite"
+  bonus_types: "Attribute;Negative Effect;Action"
+  bonus_values: "+2 Max Health;Hunger;Ignite"
   sort: "1082"
 
 - name: "Sapphire"
@@ -147,17 +147,17 @@
   source: "Requires Addon"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute,Negative Effect,Action"
-  bonus_values: "+0.03 Dodge Chance,Slowness,Freeze"
+  bonus_types: "Attribute;Negative Effect;Action"
+  bonus_values: "+0.03 Dodge Chance;Slowness;Freeze"
   sort: "1083"
 
 - name: "Silver"
-  icon: "/img/materials/silver.png"
+  icon: "/img/materials/silver_ingot.png"
   source: "Requires Addon"
   quality: 1.0
   types: "Metal"
-  bonus_types: "Attribute,Positive Effect,Negative Effect,Action"
-  bonus_values: "+5% Speed,Speed,Bad Omen,Create Explosion"
+  bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
+  bonus_values: "+5% Speed;Speed;Bad Omen;Create Explosion (Create a Wind Burst explosion, 2 Block Radius)"
   sort: "1083"
 
 - name: "Topaz"
@@ -165,7 +165,7 @@
   source: "Gems 'n Jewelry"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute,Negative Effect,Action"
-  bonus_values: "+2 Armor Toughness,Levitation,Apply Knockback"
+  bonus_types: "Attribute;Negative Effect;Action"
+  bonus_values: "+2 Armor Toughness;Levitation;Apply Knockback"
   sort: "184"
 

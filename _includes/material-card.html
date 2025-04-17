@@ -29,7 +29,7 @@
     </div>
     <div style="display: flex; gap: 20px; margin-top: 20px">
       <div style="flex: 1;">
-        <table style="width: 70%; border:1px solid grey;">
+        <table style="width: 90%; border:1px solid grey; align: left">
           <tr style="border-bottom: 1px solid grey">
             <td style="font-weight: bold; padding-left:10px ">Bonus Type</td>
             <td style="font-weight: bold; padding-left:10px ">Bonus Granted</td>
@@ -37,12 +37,12 @@
           <tr>
             <td class="pattern-cell-data">
               {% if pattern.bonus_types != "" %}
-              {{pattern.bonus_types| replace: ",", "<br>" }}
+              {{pattern.bonus_types| replace: ";", "<br>" }}
               {% endif %}
             </td>
             <td class="pattern-cell-data">
               {% if pattern.bonus_values != "" %}
-              {{pattern.bonus_values| replace: ",", "<br>" }}
+              {{pattern.bonus_values| replace: ";", "<br>" }}
               {% endif %}
             </td>
           </tr>
