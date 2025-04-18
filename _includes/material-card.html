@@ -27,26 +27,27 @@
         </table>
       </div>
     </div>
-    <div style="display: flex; gap: 20px; margin-top: 20px">
+    <div style="display: flex; gap: 20px; margin-top: 20px; margin-right: 20px">
       <div style="flex: 1;">
-        <table style="width: 90%; border:1px solid grey; align: left">
+        <table style="width: 100%; border:1px solid grey; align: left">
           <tr style="border-bottom: 1px solid grey">
-            <td style="font-weight: bold; padding-left:10px ">Bonus Type</td>
-            <td style="font-weight: bold; padding-left:10px ">Bonus Granted</td>
+            <td style="font-weight: bold; padding-left:10px">Bonus Type</td>
+            <td style="font-weight: bold; padding-left:10px">Bonus Granted</td>
           </tr>
+
+          {% assign types = pattern.bonus_types | split: ";" %}
+          {% assign values = pattern.bonus_values | split: ";" %}
+
+          {% for index in (0..types.size) %}
+          {% assign type = types[index] %}
+          {% assign value = values[index] %}
           <tr>
-            <td class="pattern-cell-data">
-              {% if pattern.bonus_types != "" %}
-              {{pattern.bonus_types| replace: ";", "<br>" }}
-              {% endif %}
-            </td>
-            <td class="pattern-cell-data">
-              {% if pattern.bonus_values != "" %}
-              {{pattern.bonus_values| replace: ";", "<br>" }}
-              {% endif %}
-            </td>
+            <td class="pattern-cell-data" style = "width:25%">{{ type }}</td>
+            <td class="pattern-cell-data">{{ value }}</td>
           </tr>
+          {% endfor %}
         </table>
+
       </div>
     </div>
   </div>
