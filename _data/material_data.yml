@@ -117,12 +117,12 @@
 
 - name: "Peridot"
   icon: "/img/materials/peridot.png"
-  source: "Requires Addon"
+  source: "Gems 'n Jewelry"
   quality: 2.0
   types: "Gem"
   bonus_types: "Attribute;Negative Effect;Positive Effect;Action"
   bonus_values: "+10% Mining Speed;Poison;Haste;Apply Knockback"
-  sort: "1080"
+  sort: "180"
 
 - name: "Platinum"
   icon: "/img/materials/platinum_ingot.png"
@@ -135,21 +135,21 @@
 
 - name: "Ruby"
   icon: "/img/materials/ruby.png"
-  source: "Requires Addon"
+  source: "Gems 'n Jewelry"
   quality: 2.0
   types: "Gem"
   bonus_types: "Attribute;Negative Effect;Action"
   bonus_values: "+2 Max Health;Hunger;Ignite"
-  sort: "1082"
+  sort: "182"
 
 - name: "Sapphire"
   icon: "/img/materials/sapphire.png"
-  source: "Requires Addon"
+  source: "Gems 'n Jewelry"
   quality: 2.0
   types: "Gem"
   bonus_types: "Attribute;Negative Effect;Action"
   bonus_values: "+0.03 Dodge Chance;Slowness;Freeze"
-  sort: "1083"
+  sort: "183"
 
 - name: "Silver"
   icon: "/img/materials/silver_ingot.png"
