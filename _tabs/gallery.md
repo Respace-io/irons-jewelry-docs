@@ -20,3 +20,5 @@ toc: true
 
 ![Jeweler Houses](/img/screenshots/jeweler_houses.png)
 
+## Preview
+![Minecraft Jewelry Mod](https://media.forgecdn.net/attachments/1161/279/2025-04-17_17-24-49-png.png)
