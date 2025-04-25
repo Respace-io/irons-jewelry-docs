@@ -21,7 +21,7 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
-## <span class="yellow"> [1.2.0] (1.21.1) 2024-04-25</span>
+## <span class="yellow"> [1.3.0] (1.21.1) 2024-04-25</span>
 ### Additions
 - Added Dynamic Loot Injections for Jewelry items
   - Dynamically inserts jewelry items into loot tables based on the loot table's contents above some threshold
