@@ -98,11 +98,11 @@ public abstract class AssetHandler {
 }
 ```
 
-Atlas API provides a custom [model loader](/atlas-api/#model-loader) that can utilize your dynamic sprites in an item
-model. In order for Atlas API to construct these dynamic models for you, you must
+In order to use the Dynamic Model [model loader](/atlas-api/#dynamic-model-loader), you must
 implement `AssetHandler#makeBakedModelPreparations`. In this method, you are provided the standard item baking context,
 including the
-ItemStack being rendered. This is called whenever an ItemStack yielding a unique [model ID](/atlas-api/#model-id) is
+ItemStack being rendered. This is called whenever an ItemStack utilizing an `atlas_api:dynamic_model` that yields a
+unique [model ID](/atlas-api/#model-id) is
 rendered for the first
 time. The baked model it produces is cached. The `BakingPreparations` record which is returned simply contains a list
 of `ModelLayer` records. The `ModelLayer`
@@ -132,26 +132,60 @@ should implement an algorithm that produces a unique and deterministic value for
 example, if your model is driven by an item component, the id should be the item component's hash code. This ID is
 stored in conjunction with your modid, so you do not need to worry about competing ids with other mods (only yourself).
 
-## Model Loader
+## Model Loaders
 
-Atlas API provides a custom item model geometry loader to acess your dynamic sprites: `atlas_api:dynamic_model`
-In order to actually use the dynamic baking features of your `AssetHandler`, you must use this geometry loader in your
-item model definitions, and give it the registered name of your asset handler under the `handler` field.
+Atlas API provides two custom model loaders with access to your sprites: Dynamic Models and Simple Models. You can
+always implement your own loader to meet more advanced rendering requirements, and
+obtain your sprites via your [asset handler](/atlas-api/#asset-handler). More about geometry loaders can be found
+here: [https://docs.neoforged.net/docs/resources/client/models/modelloaders/](https://docs.neoforged.net/docs/resources/client/models/modelloaders/)
+
+### Dynamic Model Loader
+
+The primary model loader is the Dynamic Model loader: `atlas_api:dynamic_model`. This model loader builds custom models
+through code using your
+dynamic sprites.
+In order to use custom model loaders, you must specify the `loader` field in the item model. Additionally, this loader
+requires the registered name of your asset handler under the `handler` field.
 For example, as per our [example registered handler](/atlas-api/#asset-handler):
 
 ```json
 {
-  "parent": "minecraft:item/generated",
   "loader": "atlas_api:dynamic_model",
   "handler": "examplemod:my_handler"
 }
 ```
 
-In practice, this is a very simple geometry loader, akin to the `minecraft:builtin/generated` layered model, but with
+This is similiar to the `minecraft:builtin/generated` layered model, but with
 access to Atlas
-API's dynamic atlas sprites. You can always implement your own loader to meet more advanced rendering requirements, and
-obtain your sprites via your [asset handler](/atlas-api/#asset-handler). More about geometry loaders can be found
-here: [https://docs.neoforged.net/docs/resources/client/models/modelloaders/](https://docs.neoforged.net/docs/resources/client/models/modelloaders/)
+API's dynamic atlas sprites, where the layers must be assembled via
+code ([`AssetHandler#makeBakedModelPreparations`](/atlas-api/#baked-model-preparations)). While extremely powerful, more
+implementation is required on your end, especially in terms of delineating different item types from one another. The most
+optimal use-case for Dynamic Models is when a single item can change texture based on something like item components,
+such as modular equipment items.
+
+### Simple Model Loader
+
+Additionally, for simpler use-cases without the need for code, you can use: `atlas_api:simple_model`. This model loader
+allows you to reference sprites by name, more closely mimicking vanilla item models, but without
+the runtime flexibility code-based models provide.
+This means you can use any other vanilla modeling features in this model, including making 3d models.
+In order to use custom model loaders, you must specify the `loader` field in the item model. Additionally, this loader
+requires the registered name of your asset handler under the `handler` field.
+For example, as per our [example registered handler](/atlas-api/#asset-handler):
+
+```json
+{
+  "loader": "atlas_api:simple_model",
+  "handler": "examplemod:my_handler",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "examplemod:item/a_sprite_on_my_atlas"
+  }
+}
+```
+
+This example produces a simple generated model similar to any other model in vanilla, but using a dynamically generated
+sprite instead of a fixed texture file.
 
 ## What is an Atlas?
 
