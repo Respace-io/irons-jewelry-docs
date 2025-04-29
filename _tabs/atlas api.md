@@ -7,7 +7,7 @@ toc: true
 
 ## Introduction
 
-Atlas API is a 1.21+ NeoForge API for generating [atlases](/atlas-api/#what-is-an-atlas) during game runtime, with
+Atlas API is a 1.21+ NeoForge API for generating [atlases](/atlas-api/#further-reading-what-is-an-atlas) during game runtime, with
 data-driven textures in
 mind. Atlas API provides an easy-to-use layer of abstraction around all atlas management, and provides custom model
 loaders that
@@ -53,9 +53,8 @@ developed alongside of:
 ## Asset Handler
 
 The entrypoint of Atlas API is your `AssetHandler`. These must be registered, and each registered asset handler
-automatically gets paired with a dynamic atlas. There is exactly one dynamic atlas per handler, and a handler is the
-only way to get a dynamic atlas. The implementation of its methods is how you instruct the API to build your atlas and
-stitch your models. All access to your sprites is done through your asset handler.
+automatically gets paired with exactly one dynamic atlas, managed by Atlas API. The implementation of its methods is how you instruct the API to build your atlas and
+stitch dynamic models. All access to your sprites is done through your asset handler.
 
 ```java
 public class ExampleHandlerRegistry {
@@ -77,7 +76,7 @@ class AssetHandler {
 }
 ```
 
-In order for Atlas API to build an atlas for you, you must implement `AssetHandler#buildSpriteSources`. It is called on world load, giving you access to .
+In order for Atlas API to build an atlas for you, you must implement `AssetHandler#buildSpriteSources`. It is called on world load, giving you access to world-specific information, such as datapacks.
 * * *
 A `SpriteSource` is a vanilla Minecraft structure, and tells an atlas how to convert files into sprites. Some common
 sprite sources are `SingleFile`, `DirectoryListener`, or `PalettedPermutations`. Some additional information is covered
