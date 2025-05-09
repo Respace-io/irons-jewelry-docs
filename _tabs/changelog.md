@@ -21,6 +21,29 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.4.0] (1.21.1) 2024-05-08</span>
+### Additions
+- Added Bane Ring pattern
+  - Grants action on melee hit
+
+### Changes
+- Restyled Onyx textures to be brown instead of dark blue
+- Increased rate at which Jeweler trades give Villager Xp
+- Adjust scaling of attribute based rings
+  - Superior Ring now no longer gives an inherit bonus over Improved Gemset Ring
+- Tweaked Material Bonuses, reducing duplicate bonuses
+  - Netherite
+    - Reduced Action (gain strength) effect duration from 6s -> 3s
+  - Moonstone
+    - Negative Effect: Blindness -> Weaving (no longer duplicates Onyx)
+  - Lapis
+    - Added Glowing as Negative Effect (previously nothing)
+  - Garnet
+    - Added Wither as Negative Effect (previously nothing)
+    - Action: Heal -> Grant Self Resistance (no longer duplicates Onyx)
+  - Emerald
+    - Added Infested as Negative Effect (previously nothing)
+
 ## <span class="yellow"> [1.3.0] (1.21.1) 2024-04-25</span>
 ### Additions
 - Added Dynamic Loot Injections for Jewelry items

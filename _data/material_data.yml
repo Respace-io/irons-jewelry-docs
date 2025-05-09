@@ -48,8 +48,8 @@
   source: "Vanilla"
   quality: 1.5
   types: "Gem"
-  bonus_types: "Attribute;Positive Effect;Action"
-  bonus_values: "+5% Speed;Speed;Create Items (5% chance to Create 1-4 Emerald Items)"
+  bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
+  bonus_values: "+5% Speed;Speed;Infested;Create Items (5% chance to Create 1-4 Emerald Items)"
   sort: "69"
 
 - name: "Garnet"
@@ -57,8 +57,8 @@
   source: "Gems 'n Jewelry"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute;Action"
-  bonus_values: "+4% Attack Damage;Heal (4.0 Base Healing)"
+  bonus_types: "Attribute;Negative Effect;Action"
+  bonus_values: "+4% Attack Damage;Wither;Apply Effect (Resistance I, 0:04)"
   sort: "171"
 
 - name: "Gold"
@@ -84,8 +84,8 @@
   source: "Vanilla"
   quality: 1.0
   types: "Gem"
-  bonus_types: "Attribute;Action"
-  bonus_values: "+10% Experience Gained;Apply Effect (Slowness I, 0:04)"
+  bonus_types: "Attribute;Negative Effect;Action"
+  bonus_values: "+10% Experience Gained;Glowing;Apply Effect (Slowness I, 0:04)"
   sort: "76"
 
 - name: "Moonstone"
@@ -93,8 +93,8 @@
   source: "Gems 'n Jewelry"
   quality: 2.0
   types: "Gem"
-  bonus_types: "Attribute;Negative Effect;Action"
-  bonus_values: "+10% Arrow Damage;Blindness;Create Explosion (Create a Wind Burst explosion, 2 Block Radius)"
+  bonus_types: "Attribute;Negative Effect;Positive Effect;Action"
+  bonus_values: "+10% Arrow Damage;Weaving;Invisibility;Create Explosion (Create a Wind Burst explosion, 2 Block Radius)"
   sort: "177"
 
 - name: "Netherite"
@@ -103,7 +103,7 @@
   quality: 2.5
   types: "Metal"
   bonus_types: "Attribute;Positive Effect;Negative Effect;Action"
-  bonus_values: "+5% Attack Damage;Strength;Wither;Apply Effect (Strength I, 0:06)"
+  bonus_values: "+5% Attack Damage;Strength;Wither;Apply Effect (Strength I, 0:03)"
   sort: "78"
 
 - name: "Onyx"

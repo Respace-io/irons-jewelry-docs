@@ -12,11 +12,25 @@
   bonus3: ""
   bonus4: ""
 
+- name: "Bane Ring"
+  icon: "/img/patterns/bane_ring.png"
+  locked: "No"
+  part_for_quality: "Band"
+  quality: 4.0
+  part1: "Band (6 - Metal)"
+  part2: "Skull (4 - Metal, Gem)"
+  part3: ""
+  part4: ""
+  bonus1: "Action on Attack (From Skull)"
+  bonus2: ""
+  bonus3: ""
+  bonus4: ""
+
 - name: "Barbed Band"
   icon: "/img/patterns/barbed_band.png"
   locked: "No"
   part_for_quality: "Gemstone"
-  quality: 3.0
+  quality: 2.5
   part1: "Barbed Band (8 - Metal)"
   part2: "Gemstone (3 - Gem)"
   part3: ""
@@ -156,7 +170,7 @@
   icon: "/img/patterns/superior_gemset_ring.png"
   locked: "No"
   part_for_quality: "Improved Band"
-  quality: 1.75
+  quality: 1.5
   part1: "Improved Band (6 - Metal)"
   part2: "Secondary Gemstones (1 - Gem)"
   part3: "Gemstone (2 - Gem)"
