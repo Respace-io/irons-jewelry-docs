@@ -21,6 +21,12 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.4.1] (1.21.1) 2024-05-31</span>
+### Fixes
+- Fixed jewelcrafting table exploit
+- Fixed loot injections targeting modded directories
+- Fixed nullable JEI logic
+
 ## <span class="yellow"> [1.4.0] (1.21.1) 2024-05-08</span>
 ### Additions
 - Added Bane Ring pattern
