@@ -27,6 +27,9 @@ color:rgba(0, 120, 36, 0.81)
   - Is crafted from a chain and three separate rhinestone gems
   - Grants an attribute from each gem
   - Can be found in normal high-quality-pattern sources
+- Added Jewelry title merging
+  - Jewelry item names with repeated part materials will be consolidated into one word
+  - ie: Superior Diamond-Diamond Ring -> Superior Diamond Ring
 
 ### Fixes
 - Fixed the existence of `partForQuality` part not being strictly enforced in a pattern definition. Patterns will now fail to load if there is a mismatch, instead of presenting undefined behavior in-game.
