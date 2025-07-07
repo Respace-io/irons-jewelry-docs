@@ -96,6 +96,20 @@
   bonus3: ""
   bonus4: ""
 
+- name: "Rhinestone Amulet"
+  icon: "/img/patterns/rhinestone_amulet.png"
+  locked: "No"
+  part_for_quality: "Chain"
+  quality: 1.25
+  part1: "Chain (6 - Metal)"
+  part2: "Rhinestone (1 - Gem)"
+  part3: "Rhinestone (1 - Gem)"
+  part4: "Rhinestone (1 - Gem)"
+  bonus1: "Attribute (From Rhinestone)"
+  bonus2: "Attribute (From Rhinestone)"
+  bonus3: "Attribute (From Rhinestone)"
+  bonus4: ""
+
 - name: "Sharpshooter's Loop"
   icon: "/img/patterns/sharpshooter_loop.png"
   locked: "No"

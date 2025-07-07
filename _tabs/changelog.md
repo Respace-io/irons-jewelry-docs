@@ -21,6 +21,16 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.5.0] (1.21.1) 2024-07-06</span>
+### Additions
+- Added Rhinestone Amulet necklace pattern
+  - Is crafted from a chain and three separate rhinestone gems
+  - Grants an attribute from each gem
+  - Can be found in normal high-quality-pattern sources
+
+### Fixes
+- Fixed the existence of `partForQuality` part not being strictly enforced in a pattern definition. Patterns will now fail to load if there is a mismatch, instead of presenting undefined behavior in-game.
+
 ## <span class="yellow"> [1.4.1] (1.21.1) 2024-05-31</span>
 ### Fixes
 - Fixed jewelcrafting table exploit
