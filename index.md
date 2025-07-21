@@ -14,7 +14,7 @@ pin: true
 
 ## Featuring:
 
-#### \- 2,000+ modular jewelry combinations<br>\- 7 new obtainable gemstone items<br>\- New Villager Profession<br>\- Datadriven mechanics<br>\- And more!
+#### \- 10,000+ modular jewelry combinations<br>\- 7 new obtainable gemstone items<br>\- New Villager Profession<br>\- Datadriven mechanics<br>\- And more!
 
 ***
 

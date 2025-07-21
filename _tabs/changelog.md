@@ -21,6 +21,10 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.5.1] (1.21.1) 2024-07-21</span>
+### Fixes
+- Fixed loot injection disabler remove all items from loot.
+
 ## <span class="yellow"> [1.5.0] (1.21.1) 2024-07-06</span>
 ### Additions
 - Added Rhinestone Amulet necklace pattern
