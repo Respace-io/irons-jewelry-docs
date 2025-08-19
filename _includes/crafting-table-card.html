@@ -27,7 +27,7 @@
         {% endif %}
 
         {% if recipe.tooltip != "" and recipe.tooltip != desc %}
-          {{recipe.tooltip| replace: ",", "<br>" }}
+          {{recipe.tooltip| replace: ";", "<br>" }}
         {% endif %}
       </div>
 
