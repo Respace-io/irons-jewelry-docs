@@ -21,6 +21,16 @@ color:rgba(0, 120, 36, 0.81)
 
 <hr>
 
+## <span class="yellow"> [1.5.3] (1.21.1) 2024-10-08</span>
+### Changes
+- Added Portuguese (Brazil) localization, thanks to PrincessStellar
+- Updated Russian localization, thanks to Heimdallr-1
+- Updated Chinese localization, thanks to Jiahe Yan
+
+## <span class="yellow"> [1.5.2] (1.21.1) 2024-08-12</span>
+### Changes
+- Update minimum required Atlas API version
+
 ## <span class="yellow"> [1.5.1] (1.21.1) 2024-07-21</span>
 ### Fixes
 - Fixed loot injection disabler remove all items from loot.
