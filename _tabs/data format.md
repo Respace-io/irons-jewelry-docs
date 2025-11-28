@@ -18,7 +18,7 @@ In order for patterns you create to drop in loot or trades, you must add your pa
 - `#irons_jewelry:generic_lootable`
 - `#irons_jewelry:high_quality_lootable`
 - `#irons_jewelry:trader_sellable`
-- [See all pattern tags here](https://github.com/iron431/irons-jewelry/tree/main/src/main/resources/data/irons_jewelry/tags/irons_jewelry/pattern)
+- [See all pattern tags here](https://github.com/iron431/irons-jewelry/tree/1.21.1/src/main/resources/data/irons_jewelry/tags/irons_jewelry/pattern)
 
 Patterns are composed of part ingredients (part definitions combined with material costs) and determine the bonus a worn piece of this jewelry will provide. This is where the generic buffs are assigned, such as "this ring provides an attribute".
 
